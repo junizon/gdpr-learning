@@ -92,8 +92,46 @@ def due_ids(p):
     return [k for k,v in p['attempts'].items() if v['due']<=today() and QUESTIONS[k][0]['id'] in p['read']]
 
 st.set_page_config(page_title='GDPR & AI Governance',page_icon='📚',layout='centered',initial_sidebar_state='collapsed')
-st.title('GDPR & AI Governance')
-st.caption('Personal study • Dutch and EU higher education')
+# Presentation only: keep curriculum, quiz logic and storage unchanged.
+st.markdown("""
+<style>
+.stApp { background: var(--background-color); }
+.block-container { max-width: 1000px; padding-top: 2.7rem; padding-bottom: 3rem; }
+.study-hero {
+    background: linear-gradient(118deg, #173b49 0%, #235566 63%, #306b70 100%);
+    border-radius: 17px; padding: 1.65rem 1.85rem; margin-bottom: .65rem;
+    color: #fff; position: relative; overflow: hidden;
+    border: 1px solid rgba(255,255,255,.09);
+}
+.study-hero:after { content: ""; position: absolute; width: 220px; height: 220px;
+    border: 1px solid rgba(255,255,255,.13); border-radius: 50%; right: -65px; top: -110px;
+    box-shadow: 0 0 0 25px rgba(255,255,255,.045), 0 0 0 52px rgba(255,255,255,.035);
+    pointer-events: none; }
+.study-kicker { font-size: .73rem; font-weight: 650; letter-spacing: .13em; text-transform: uppercase; color: #c3e2dd; margin-bottom: .45rem; }
+.study-hero h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; font-size: clamp(1.65rem, 4.5vw, 2.6rem); line-height: 1.17; color: #fff !important; padding: 0; margin: 0 0 .45rem; letter-spacing: -.025em; position: relative; z-index: 1; }
+.study-hero p { color: #e0efed; margin: 0; font-size: .94rem; line-height: 1.45; position: relative; z-index: 1; }
+[data-testid="stMetric"] { border: 1px solid color-mix(in srgb, currentColor 14%, transparent); border-radius: 12px; padding: .8rem 1rem; background: color-mix(in srgb, #43877e 5%, var(--background-color)); }
+[data-testid="stMetricValue"] { font-weight: 600; font-variant-numeric: tabular-nums; }
+[data-testid="stVerticalBlockBorderWrapper"] > div { border-radius: 13px; }
+[data-testid="stProgress"] [role="progressbar"] > div { background: #368b80 !important; }
+.stButton > button[kind="primary"], .stFormSubmitButton > button[kind="primary"] { background: #256c64; border-color: #256c64; color: white; }
+.stButton > button[kind="primary"]:hover { background: #1d554e; border-color: #1d554e; color: white; }
+.stButton > button:not([kind="primary"]):hover { border-color: #368b80; color: #368b80; }
+.study-module { display: flex; align-items: center; gap: .55rem; margin-bottom: .1rem; }
+.study-module-num { display: inline-flex; align-items: center; justify-content: center; font-size: .76rem; font-weight: 700; border-radius: 8px; width: 2.15rem; height: 2.15rem; flex-shrink: 0; color: var(--module-ink); background: var(--module-bg); }
+.study-module-tag { font-size: .72rem; text-transform: uppercase; letter-spacing: .085em; font-weight: 650; opacity: .8; }
+@media (max-width: 640px) {
+    .block-container { padding: 2.1rem 1rem 2rem; }
+    .study-hero { padding: 1.3rem 1.15rem; border-radius: 13px; }
+    [data-testid="stMetric"] { padding: .55rem .65rem; }
+}
+</style>
+<div class="study-hero">
+    <div class="study-kicker">Personal learning studio</div>
+    <h1>GDPR &amp; AI Governance</h1>
+    <p>Dutch and EU higher education &nbsp;·&nbsp; Learn, practice, revisit.</p>
+</div>
+""", unsafe_allow_html=True)
 password=secret('app_password')
 if not isinstance(password,str) or not password:
     st.warning('Access is not configured. Set app_password in Streamlit Secrets before using this app.'); st.stop()
@@ -113,7 +151,7 @@ p=st.session_state.progress
 if 'nav' not in st.session_state: st.session_state.nav='Home'
 if 'lesson' not in st.session_state: st.session_state.lesson=next(iter(LESSONS))
 if not secret('progress_dsn'):
-    st.caption('Storage: local/temporary on Community Cloud. Export backups in Progress; optional database setup enables durable saving.')
+    st.caption('Progress storage is temporary. Export a backup in Progress.')
 if st.session_state.get('save_error'): st.error(st.session_state.save_error)
 # Synchronize widget state before creating widgets; callbacks run before reruns.
 pages=['Home','Learn','Quiz','Revision','Progress','Legal library']
@@ -124,11 +162,26 @@ page=st.session_state.nav
 if page=='Home':
     c1,c2,c3=st.columns(3); c1.metric('Day streak',streak(p)); c2.metric('Lessons read',f"{len(p['read'])}/{len(LESSONS)}"); c3.metric('Quiz passed',f"{sum(mastered(l,p) for l in LESSONS.values())}/{len(LESSONS)}")
     if p['last'] and st.button('Resume last lesson',use_container_width=True): open_lesson(p['last'])
-    for m in COURSE['modules']:
-        items=[l for l in LESSONS.values() if l['module']==m['id']]; n=sum(l['id'] in p['read'] for l in items)
-        with st.container(border=True):
-            st.subheader(m['title']); st.write(m['description']); st.progress(n/len(items),text=f'{n} of {len(items)} lessons read')
-            if st.button('Open module',key='open_'+m['id']): open_lesson(next((l['id'] for l in items if l['id'] not in p['read']),items[0]['id']))
+    st.subheader('Your learning path')
+    module_style = {
+        'gdpr': ('01', 'Foundation', '#dcecea', '#205c55'),
+        'ai': ('02', 'Foundation', '#e3e8f7', '#3d508e'),
+        'research': ('03', 'Applied study', '#f0e5f5', '#704583'),
+        'education': ('04', 'Applied study', '#f7ebd8', '#805619'),
+        'operations': ('05', 'Applied study', '#e4ebf1', '#425d72'),
+    }
+    modules=COURSE['modules']
+    for start in range(0,len(modules),2):
+        pair=modules[start:start+2]
+        columns=st.columns(2) if len(pair)==2 else [st.container()]
+        for col,m in zip(columns,pair):
+            items=[l for l in LESSONS.values() if l['module']==m['id']]; n=sum(l['id'] in p['read'] for l in items)
+            num,tag,bg,ink=module_style.get(m['id'], ('--','Study','#e4ebf1','#425d72'))
+            with col:
+                with st.container(border=True):
+                    st.markdown(f'<div class="study-module"><span class="study-module-num" style="--module-bg:{bg};--module-ink:{ink}">{num}</span><span class="study-module-tag">{tag}</span></div>',unsafe_allow_html=True)
+                    st.subheader(m['title']); st.write(m['description']); st.progress(n/len(items),text=f'{n} of {len(items)} lessons read')
+                    if st.button('Open module',key='open_'+m['id'],use_container_width=True): open_lesson(next((l['id'] for l in items if l['id'] not in p['read']),items[0]['id']))
     st.caption(f"Curriculum {COURSE['version']} · prepared {COURSE['reviewed']} · educational material, not institutional policy or case-specific legal advice.")
 elif page=='Learn':
     mods={m['id']:m for m in COURSE['modules']}
