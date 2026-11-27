@@ -175,6 +175,9 @@ if st.session_state.get('save_error'): st.error(st.session_state.save_error)
 # Synchronize widget state before creating widgets; callbacks run before reruns.
 pages=['Home','Learn','Quiz','Revision','Progress','Legal library']
 def change_nav(): st.session_state.nav=st.session_state.nav_widget
+def back_home(): st.session_state.nav='Home'
+if st.session_state.nav!='Home':
+    st.button('← Back to Home',key='home_top',on_click=back_home)
 st.session_state.nav_widget=st.session_state.nav
 st.selectbox('Navigate',pages,key='nav_widget',on_change=change_nav)
 page=st.session_state.nav
@@ -235,6 +238,7 @@ elif page=='Learn':
     if st.button('Take lesson quiz',disabled=lid not in p['read'],type='primary',use_container_width=True): launch(q['id'] for q in l['questions'])
     if lid not in p['read']: st.caption('Mark the lesson as read to unlock its quiz.')
     if ids.index(lid)<len(ids)-1 and st.button('Next lesson'): open_lesson(ids[ids.index(lid)+1])
+    st.button('← Back to Home',key='home_lesson_bottom',on_click=back_home,use_container_width=True)
 elif page=='Quiz':
     quiz=st.session_state.get('quiz')
     if not quiz:
