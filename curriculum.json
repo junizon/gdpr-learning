@@ -1,0 +1,1244 @@
+{
+  "version": "1.0",
+  "reviewed": "2026-11-27",
+  "sources": {
+    "gdpr": {
+      "title": "GDPR — Regulation (EU) 2016/679",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng",
+      "type": "Binding EU law"
+    },
+    "uavg": {
+      "title": "UAVG — Dutch GDPR Implementation Act",
+      "url": "https://wetten.overheid.nl/BWBR0040940/",
+      "type": "Binding Dutch law"
+    },
+    "whw": {
+      "title": "WHW — Higher Education and Research Act",
+      "url": "https://wetten.overheid.nl/BWBR0005682/",
+      "type": "Binding Dutch law"
+    },
+    "ai": {
+      "title": "AI Act — Regulation (EU) 2024/1689 (original text)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+      "type": "Binding EU law; read with amendments"
+    },
+    "omnibus": {
+      "title": "Digital Omnibus on AI — Regulation (EU) 2026/1744",
+      "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng",
+      "type": "Binding EU amending law"
+    },
+    "timeline": {
+      "title": "European Commission — AI Act implementation",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      "type": "Official explanatory guidance"
+    },
+    "literacy": {
+      "title": "European Commission — AI literacy Q&A",
+      "url": "https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers",
+      "type": "Official explanatory guidance"
+    },
+    "edpb": {
+      "title": "EDPB guidelines and recommendations",
+      "url": "https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en",
+      "type": "Regulatory guidance index"
+    },
+    "ap": {
+      "title": "Autoriteit Persoonsgegevens",
+      "url": "https://autoriteitpersoonsgegevens.nl/",
+      "type": "Dutch supervisory authority guidance"
+    },
+    "curia": {
+      "title": "Court of Justice of the European Union",
+      "url": "https://curia.europa.eu/",
+      "type": "Case law search"
+    },
+    "surf": {
+      "title": "SURF Privacy Expertise Centrum",
+      "url": "https://pec.surf.nl/",
+      "type": "Sector guidance"
+    }
+  },
+  "modules": [
+    {
+      "id": "gdpr",
+      "title": "GDPR foundations",
+      "description": "Core concepts and the Dutch legal context."
+    },
+    {
+      "id": "ai",
+      "title": "AI Act foundations",
+      "description": "Scope, roles, classification and application dates."
+    },
+    {
+      "id": "research",
+      "title": "Research",
+      "description": "Scientific research, data reuse and AI development."
+    },
+    {
+      "id": "education",
+      "title": "Education",
+      "description": "Teaching, learning, assessment and student rights."
+    },
+    {
+      "id": "operations",
+      "title": "Operations",
+      "description": "Staff, suppliers and organizational accountability."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "g01",
+      "module": "gdpr",
+      "title": "Personal data and identifiability",
+      "level": "Foundation",
+      "objective": "Distinguish personal, pseudonymized and anonymous information.",
+      "concepts": [
+        "Personal data concern an identified or identifiable natural person. Identification can be indirect; a name is not required.",
+        "Pseudonymization separates identifying information from the remaining data. It reduces risk but does not automatically make data anonymous.",
+        "Anonymity requires considering means reasonably likely to be used to identify a person, taking account of context and available technology."
+      ],
+      "example": "A student research assistant replaces interviewees’ names with codes and keeps the key separately. The coded records still relate to identifiable participants.",
+      "nuance": "Identifiability is contextual. Removing direct identifiers does not establish that a dataset is anonymous; consider linkage and small groups.",
+      "terms": {
+        "persoonsgegevens": "personal data",
+        "betrokkene": "data subject",
+        "pseudonimisering": "pseudonymization"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 4(1), 4(5); Recital 26"
+        }
+      ],
+      "questions": [
+        {
+          "id": "g01-1",
+          "statement": "A student number can be personal data even when a name is absent.",
+          "answer": true,
+          "explanation": "An identifier can enable indirect identification.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 4(1); Recital 26"
+            }
+          ]
+        },
+        {
+          "id": "g01-2",
+          "statement": "Keeping a code key in a separate secure location makes the coded records anonymous for the university.",
+          "answer": false,
+          "explanation": "The university can still link records to individuals; separation is a safeguard.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 4(5); Recital 26"
+            }
+          ]
+        },
+        {
+          "id": "g01-3",
+          "statement": "A group-level statistic can fall outside GDPR if no natural person is reasonably identifiable.",
+          "answer": true,
+          "explanation": "Genuinely anonymous information is outside GDPR’s personal-data scope.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Recital 26"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g02",
+      "module": "gdpr",
+      "title": "Principles and lawful bases",
+      "level": "Foundation",
+      "objective": "Identify a purpose and lawful basis before processing.",
+      "concepts": [
+        "Article 5 sets principles including fairness, transparency, purpose limitation, minimization, accuracy, storage limitation, security and accountability.",
+        "Article 6 requires an applicable lawful basis. Public task must have a basis in EU or member-state law; consent is not a universal default.",
+        "Special-category data require an applicable Article 9 condition in addition to Article 6."
+      ],
+      "example": "A university collects only details necessary to administer enrollment under its relevant legal duties.",
+      "nuance": "A university cannot assume that every activity is a public task. Identify the actual purpose and legal basis; Article 6(1)(f) is unavailable to public authorities when performing their tasks.",
+      "terms": {
+        "grondslag": "lawful basis",
+        "doelbinding": "purpose limitation",
+        "dataminimalisatie": "data minimization"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 5, 6, 9; Recitals 39, 43, 45"
+        }
+      ],
+      "questions": [
+        {
+          "id": "g02-1",
+          "statement": "A lawful basis makes the data-minimization principle optional.",
+          "answer": false,
+          "explanation": "The principles apply alongside the lawful basis.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5–6"
+            }
+          ]
+        },
+        {
+          "id": "g02-2",
+          "statement": "A public-task basis needs a foundation in EU or member-state law.",
+          "answer": true,
+          "explanation": "Article 6(3) requires the legal basis for processing under Article 6(1)(e).",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(1)(e), 6(3); Recital 45"
+            }
+          ]
+        },
+        {
+          "id": "g02-3",
+          "statement": "An Article 9 condition replaces the need for an Article 6 lawful basis.",
+          "answer": false,
+          "explanation": "Both layers must be addressed for special-category processing.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6, 9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g03",
+      "module": "gdpr",
+      "title": "Controllers, processors and joint control",
+      "level": "Intermediate",
+      "objective": "Classify parties by what they actually do.",
+      "concepts": [
+        "A controller determines purposes and means of processing. A processor acts on behalf of a controller.",
+        "Joint controllers jointly determine purposes and means; Article 26 requires an arrangement reflecting their responsibilities.",
+        "Article 28 requires sufficient processor guarantees and a binding agreement containing the prescribed terms."
+      ],
+      "example": "A university instructs a survey hosting company to store responses. The company may be a processor for that activity; a partner university defining a joint study may be a joint controller.",
+      "nuance": "A contract label does not settle the classification. A provider may have different roles for different processing purposes.",
+      "terms": {
+        "verwerkingsverantwoordelijke": "controller",
+        "verwerker": "processor",
+        "gezamenlijke verwerkingsverantwoordelijken": "joint controllers"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 4(7)–(8), 26, 28; Recital 79"
+        }
+      ],
+      "questions": [
+        {
+          "id": "g03-1",
+          "statement": "Two universities can be joint controllers without having identical responsibilities.",
+          "answer": true,
+          "explanation": "Article 26 calls for a transparent allocation of responsibilities, not identical roles.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 26; Recital 79"
+            }
+          ]
+        },
+        {
+          "id": "g03-2",
+          "statement": "A company is a processor for all activities whenever a contract calls it a processor.",
+          "answer": false,
+          "explanation": "Actual purposes and means determine the role for each activity.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 4(7)–(8), 28(10)"
+            }
+          ]
+        },
+        {
+          "id": "g03-3",
+          "statement": "A controller must assess whether a processor provides sufficient guarantees.",
+          "answer": true,
+          "explanation": "Article 28(1) places this requirement on the controller.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 28(1)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g04",
+      "module": "gdpr",
+      "title": "Rights, transparency and automated decisions",
+      "level": "Intermediate",
+      "objective": "Recognize rights and their limits.",
+      "concepts": [
+        "Articles 13 and 14 govern information provision. Access, rectification, erasure, restriction, portability and objection have distinct conditions.",
+        "Erasure is not unconditional; Article 17(3) contains exceptions including legal obligations and certain public-interest purposes.",
+        "Article 22 concerns decisions based solely on automated processing that produce legal or similarly significant effects, subject to exceptions and safeguards."
+      ],
+      "example": "A student asks for access to their personal data in a learning platform. The university must evaluate the request under Article 15 and respect other persons’ rights.",
+      "nuance": "A nominal human signature is not necessarily meaningful review. Examine actual decision-making, not only the workflow diagram.",
+      "terms": {
+        "inzagerecht": "right of access",
+        "recht op gegevenswissing": "right to erasure"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 12–22; Recitals 58–71"
+        }
+      ],
+      "questions": [
+        {
+          "id": "g04-1",
+          "statement": "A valid erasure request can be refused for records that must be retained under an applicable legal obligation.",
+          "answer": true,
+          "explanation": "Article 17(3)(b) provides an exception where retention is necessary.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 17(3)(b)"
+            }
+          ]
+        },
+        {
+          "id": "g04-2",
+          "statement": "The right to data portability applies to every lawful basis.",
+          "answer": false,
+          "explanation": "Article 20 applies to automated processing based on consent or contract, subject to its conditions.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 20(1)"
+            }
+          ]
+        },
+        {
+          "id": "g04-3",
+          "statement": "Article 22 addresses only decisions that produce legal or similarly significant effects and are based solely on automated processing.",
+          "answer": true,
+          "explanation": "These are the central conditions in Article 22(1); other GDPR duties can still apply outside it.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 22(1); Recital 71"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g05",
+      "module": "gdpr",
+      "title": "Accountability, security and DPIAs",
+      "level": "Intermediate",
+      "objective": "Understand when safeguards and impact assessment are required.",
+      "concepts": [
+        "Controllers must demonstrate compliance and implement appropriate technical and organizational measures.",
+        "A DPIA is required where processing is likely to result in high risk to individuals. It assesses necessity, proportionality, risks and measures before processing.",
+        "If high risk remains absent measures to mitigate it, Article 36 requires prior consultation with the supervisory authority."
+      ],
+      "example": "A university proposes systematic monitoring of students. A DPIA may be required based on the nature, scope, context and purpose.",
+      "nuance": "A DPIA is not merely a security review, and its completion does not by itself establish lawfulness.",
+      "terms": {
+        "gegevensbeschermingseffectbeoordeling": "data protection impact assessment",
+        "functionaris voor gegevensbescherming": "data protection officer"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 5(2), 24–25, 32, 35–36; Recitals 75, 78, 84, 90–94"
+        }
+      ],
+      "questions": [
+        {
+          "id": "g05-1",
+          "statement": "A DPIA examines risks to individuals’ rights and freedoms, not only risks to the university.",
+          "answer": true,
+          "explanation": "The focus is the impact on natural persons.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 35(7); Recital 90"
+            }
+          ]
+        },
+        {
+          "id": "g05-2",
+          "statement": "A DPIA is required for every new spreadsheet containing personal data.",
+          "answer": false,
+          "explanation": "The trigger is likely high risk, not the mere existence of personal data.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 35(1)"
+            }
+          ]
+        },
+        {
+          "id": "g05-3",
+          "statement": "An existing security certification removes the controller’s accountability obligations.",
+          "answer": false,
+          "explanation": "Certification may help demonstrate compliance but does not remove responsibility.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 24, 42(4)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a01",
+      "module": "ai",
+      "title": "Scope, roles and research exclusions",
+      "level": "Foundation",
+      "objective": "Separate AI Act roles from GDPR roles.",
+      "concepts": [
+        "The AI Act regulates AI systems and certain models. It defines providers and deployers by their activities, not by GDPR classifications.",
+        "A university using an AI system under its authority can be a deployer. A university developing and putting its own AI system into service may be a provider.",
+        "Article 2(6) excludes systems/models and outputs specifically developed and put into service solely for scientific research and development. Article 2(8) separately addresses pre-market research, testing and development; real-world testing is not covered by that exclusion."
+      ],
+      "example": "A lab builds a research-only model; a faculty separately adopts a commercial tool for administrative tasks. The two uses need different scope assessments.",
+      "nuance": "An AI Act research exclusion does not exempt personal-data processing from GDPR. Reassess when intended purpose changes.",
+      "terms": {
+        "aanbieder": "provider",
+        "gebruiksverantwoordelijke": "deployer"
+      },
+      "references": [
+        {
+          "source": "ai",
+          "location": "Art. 2(6)–(8), 3(1), 3(3)–(4); Recital 25"
+        },
+        {
+          "source": "omnibus",
+          "location": "Art. 1 (amendments)"
+        }
+      ],
+      "questions": [
+        {
+          "id": "a01-1",
+          "statement": "An AI Act deployer is necessarily a GDPR processor.",
+          "answer": false,
+          "explanation": "These are separate legal classifications based on different activities.",
+          "references": [
+            {
+              "source": "ai",
+              "location": "Art. 3(4)"
+            },
+            {
+              "source": "gdpr",
+              "location": "Art. 4(8)"
+            }
+          ]
+        },
+        {
+          "id": "a01-2",
+          "statement": "A university’s internal use of a commercial AI system can fall within the AI Act.",
+          "answer": true,
+          "explanation": "Organizational use under its authority can make it a deployer.",
+          "references": [
+            {
+              "source": "ai",
+              "location": "Art. 3(4)"
+            }
+          ]
+        },
+        {
+          "id": "a01-3",
+          "statement": "The AI Act scientific-research exclusion also removes GDPR obligations.",
+          "answer": false,
+          "explanation": "GDPR remains separately applicable to personal-data processing.",
+          "references": [
+            {
+              "source": "ai",
+              "location": "Art. 2(7)"
+            },
+            {
+              "source": "gdpr",
+              "location": "Art. 2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a02",
+      "module": "ai",
+      "title": "AI literacy and prohibited practices",
+      "level": "Intermediate",
+      "objective": "Understand already applicable duties and prohibitions.",
+      "concepts": [
+        "Amended Article 4 requires providers and deployers to support AI literacy of staff and others operating or using AI on their behalf. Measures should reflect knowledge, context and affected persons.",
+        "The July 2026 amendment removed the original wording requiring a sufficient level; the obligation to take literacy measures remains.",
+        "Article 5 prohibits specified practices, including emotion inference in workplaces and educational institutions based on biometric data, subject to the medical or safety exception."
+      ],
+      "example": "A faculty organizes context-specific training for staff using generative AI and prohibits an emotion-recognition system intended to infer students’ emotions during examinations.",
+      "nuance": "Article 4 does not mandate one standard training course or certificate. High-risk systems can entail additional obligations.",
+      "terms": {
+        "AI-geletterdheid": "AI literacy",
+        "verboden AI-praktijken": "prohibited AI practices"
+      },
+      "references": [
+        {
+          "source": "ai",
+          "location": "Art. 4–5, 3(39); Recital 44"
+        },
+        {
+          "source": "omnibus",
+          "location": "Art. 1(5); Recital 8"
+        },
+        {
+          "source": "literacy",
+          "location": "Article 4 amendment Q&A"
+        }
+      ],
+      "questions": [
+        {
+          "id": "a02-1",
+          "statement": "The 2026 amendment removed every obligation for deployers to support AI literacy.",
+          "answer": false,
+          "explanation": "The amended Article 4 retains the duty to take measures to support literacy.",
+          "references": [
+            {
+              "source": "omnibus",
+              "location": "Art. 1(5)"
+            }
+          ]
+        },
+        {
+          "id": "a02-2",
+          "statement": "AI literacy measures should reflect how AI is used and who is affected.",
+          "answer": true,
+          "explanation": "The amended text expressly includes context and affected people.",
+          "references": [
+            {
+              "source": "omnibus",
+              "location": "Art. 1(5)"
+            }
+          ]
+        },
+        {
+          "id": "a02-3",
+          "statement": "A university may infer student emotions from biometric data for ordinary classroom engagement monitoring without considering Article 5.",
+          "answer": false,
+          "explanation": "The educational emotion-inference prohibition is directly relevant; ordinary engagement is not the medical/safety exception.",
+          "references": [
+            {
+              "source": "ai",
+              "location": "Art. 5(1)(f), 3(39); Recital 44"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a03",
+      "module": "ai",
+      "title": "High-risk AI and the implementation calendar",
+      "level": "Intermediate",
+      "objective": "Recognize intended-purpose classification and distinguish future rules from current duties.",
+      "concepts": [
+        "Annex III lists education and employment use cases. Article 6 governs classification, including a limited exception for systems that do not pose a significant risk, subject to conditions; profiling of natural persons defeats that exception.",
+        "High-risk requirements include risk management, data governance and human oversight. Provider and deployer duties differ.",
+        "The 2026 Digital Omnibus postpones Annex III high-risk rules to 2 December 2027 and relevant Annex I product rules to 2 August 2028. The general application date was 2 August 2026; prohibitions and literacy started in February 2025. Transitional rules matter."
+      ],
+      "example": "A university considers AI for admissions ranking. It should plan for the high-risk framework, while applying GDPR and any AI Act obligations already in force.",
+      "nuance": "High-risk does not mean prohibited. Classification depends on intended purpose and the applicable legal conditions. Dates should be rechecked before practical reliance.",
+      "terms": {
+        "AI-systemen met een hoog risico": "high-risk AI systems",
+        "menselijk toezicht": "human oversight"
+      },
+      "references": [
+        {
+          "source": "ai",
+          "location": "Art. 6, 9–15, 26, 113; Annex III(3)–(4)"
+        },
+        {
+          "source": "omnibus",
+          "location": "Art. 1 (amendments to Art. 113)"
+        },
+        {
+          "source": "timeline",
+          "location": "Current application timeline"
+        }
+      ],
+      "questions": [
+        {
+          "id": "a03-1",
+          "statement": "Every AI tool used at a university is high-risk solely because its user is a university.",
+          "answer": false,
+          "explanation": "The specific intended purpose and Article 6 classification criteria matter.",
+          "references": [
+            {
+              "source": "ai",
+              "location": "Art. 6; Annex III"
+            }
+          ]
+        },
+        {
+          "id": "a03-2",
+          "statement": "An Annex III admissions system can be high-risk even though its vendor is not a university.",
+          "answer": true,
+          "explanation": "The intended admissions use, not the vendor’s institutional identity, drives classification.",
+          "references": [
+            {
+              "source": "ai",
+              "location": "Art. 6; Annex III(3)(a)"
+            }
+          ]
+        },
+        {
+          "id": "a03-3",
+          "statement": "The general Annex III high-risk application date is 2 December 2027 under the July 2026 amendments.",
+          "answer": true,
+          "explanation": "The amendment extends this deadline; other duties may already apply.",
+          "references": [
+            {
+              "source": "omnibus",
+              "location": "Art. 1 (Art. 113 amendment)"
+            },
+            {
+              "source": "timeline",
+              "location": "High-risk application dates"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r01",
+      "module": "research",
+      "title": "Participation consent and research lawful bases",
+      "level": "Intermediate",
+      "objective": "Separate informed consent from the GDPR basis.",
+      "concepts": [
+        "Agreement to participate in research and GDPR consent serve different purposes. A study can rely on another valid Article 6 basis while obtaining ethical participation consent.",
+        "GDPR consent must be freely given, specific, informed and unambiguous. Withdrawal must be as easy as giving consent.",
+        "For special categories, an Article 9 condition is also necessary. Dutch UAVG Article 24 provides a conditional research exception."
+      ],
+      "example": "A cognitive science study uses informed participation consent, while the university evaluates whether public task is the appropriate GDPR basis.",
+      "nuance": "Recital 33 recognizes that some scientific research purposes cannot be fully identified initially, but it does not authorize unlimited consent.",
+      "terms": {
+        "toestemming": "consent",
+        "wetenschappelijk onderzoek": "scientific research"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 4(11), 6–7, 9; Recitals 33, 42–43"
+        },
+        {
+          "source": "uavg",
+          "location": "Art. 24"
+        }
+      ],
+      "questions": [
+        {
+          "id": "r01-1",
+          "statement": "A signed research participation form establishes GDPR consent for every later use of the data.",
+          "answer": false,
+          "explanation": "GDPR consent has its own conditions and scope. Later purposes require separate consideration.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 4(11), 5(1)(b), 7; Recital 33"
+            }
+          ]
+        },
+        {
+          "id": "r01-2",
+          "statement": "Ethical participation consent can coexist with a different GDPR lawful basis.",
+          "answer": true,
+          "explanation": "The two concepts are distinct; the chosen GDPR basis must satisfy Article 6.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6–7"
+            }
+          ]
+        },
+        {
+          "id": "r01-3",
+          "statement": "Scientific research automatically permits processing special-category data under Dutch law.",
+          "answer": false,
+          "explanation": "Article 9 and UAVG Article 24 impose conditions; research status alone is not enough.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 9(2)(j), 89(1)"
+            },
+            {
+              "source": "uavg",
+              "location": "Art. 24"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r02",
+      "module": "research",
+      "title": "Secondary use, retention and research safeguards",
+      "level": "Intermediate",
+      "objective": "Understand compatibility and research-specific safeguards.",
+      "concepts": [
+        "Further processing for scientific research is not considered incompatible with the initial purposes under Article 5(1)(b) when Article 89(1) applies.",
+        "Longer storage for research can be permitted subject to appropriate safeguards; GDPR itself sets no universal ten-year research retention period.",
+        "Article 89 requires safeguards, especially minimization. UAVG Article 44 allows certain rights to be limited in specified research/statistical circumstances."
+      ],
+      "example": "A lab wishes to reuse interview records from an earlier project. It checks purpose, lawful basis, transparency, identifiability and safeguards before reuse.",
+      "nuance": "Open science does not require public release of personal data. Institutional retention rules and funder requirements must be considered separately.",
+      "terms": {
+        "hergebruik": "reuse",
+        "bewaartermijn": "retention period",
+        "waarborgen": "safeguards"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 5(1)(b), 5(1)(e), 6(4), 89; Recitals 50, 156–159"
+        },
+        {
+          "source": "uavg",
+          "location": "Art. 44"
+        }
+      ],
+      "questions": [
+        {
+          "id": "r02-1",
+          "statement": "GDPR itself imposes a ten-year minimum retention period on all university research data.",
+          "answer": false,
+          "explanation": "Retention depends on purpose, applicable law and safeguards; institutional requirements are separate.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(e), 89(1)"
+            }
+          ]
+        },
+        {
+          "id": "r02-2",
+          "statement": "Research compatibility under Article 5(1)(b) is linked to Article 89(1) safeguards.",
+          "answer": true,
+          "explanation": "The special compatibility rule expressly refers to Article 89(1).",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(b), 89(1)"
+            }
+          ]
+        },
+        {
+          "id": "r02-3",
+          "statement": "UAVG Article 44 removes all data subject rights for any research activity.",
+          "answer": false,
+          "explanation": "It addresses specific rights and conditions, not a blanket exemption.",
+          "references": [
+            {
+              "source": "uavg",
+              "location": "Art. 44"
+            },
+            {
+              "source": "gdpr",
+              "location": "Art. 89"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r03",
+      "module": "research",
+      "title": "International collaborations and AI development",
+      "level": "Advanced",
+      "objective": "Distinguish sharing arrangements, transfers and research exclusions.",
+      "concepts": [
+        "Partners’ controller/processor roles depend on actual purposes and means. Sharing personal data must have a lawful basis and appropriate safeguards.",
+        "Chapter V applies to qualifying transfers to third countries or international organizations. Adequacy, appropriate safeguards or narrowly applicable derogations are different routes.",
+        "Research-only AI exclusions are purpose-dependent. A research system later deployed in student services must be reassessed."
+      ],
+      "example": "A Dutch lab gives an external Canadian research partner access to identifiable study data. It checks the recipient and whether an adequacy decision covers that recipient, or another valid transfer route is needed.",
+      "nuance": "Access from abroad may be relevant even without downloading. A collaboration agreement alone is not a Chapter V transfer mechanism.",
+      "terms": {
+        "doorgifte": "international transfer",
+        "adequaatheidsbesluit": "adequacy decision"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 26, 28, 44–49; Recitals 101–108"
+        },
+        {
+          "source": "ai",
+          "location": "Art. 2(6)–(8)"
+        }
+      ],
+      "questions": [
+        {
+          "id": "r03-1",
+          "statement": "A collaboration agreement alone establishes a valid GDPR transfer mechanism for all third-country recipients.",
+          "answer": false,
+          "explanation": "Chapter V requires an applicable mechanism and conditions; an ordinary collaboration agreement is not sufficient.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 44–49"
+            }
+          ]
+        },
+        {
+          "id": "r03-2",
+          "statement": "A research-only AI system later used operationally should be reassessed under the AI Act.",
+          "answer": true,
+          "explanation": "The scope exclusion depends on the system’s scientific-only purpose and use.",
+          "references": [
+            {
+              "source": "ai",
+              "location": "Art. 2(6), 2(8)"
+            }
+          ]
+        },
+        {
+          "id": "r03-3",
+          "statement": "Adequacy decisions must be checked for their scope, rather than assuming they cover every recipient in a country.",
+          "answer": true,
+          "explanation": "Adequacy can apply to a country, territory, specified sector or international organization.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 45(1)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e01",
+      "module": "education",
+      "title": "Student records, examinations and retention",
+      "level": "Intermediate",
+      "objective": "Connect GDPR principles with Dutch education responsibilities.",
+      "concepts": [
+        "Student administration and examination processing require a specific purpose, lawful basis, access controls and defined retention.",
+        "WHW Articles 7.12 and 7.12b establish the examination board and its responsibilities. This does not grant unrestricted access to every student record.",
+        "Erasure requests must be assessed against relevant legal obligations and other exceptions, rather than handled automatically."
+      ],
+      "example": "A student requests deletion of assessment records during an appeal. The university considers applicable retention rules, examination responsibilities and the need to preserve evidence.",
+      "nuance": "Retention periods for exam scripts may depend on institutional schedules and other rules. Do not infer a single period from GDPR or WHW.",
+      "terms": {
+        "examencommissie": "examination board",
+        "tentamen": "examination"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 5, 6, 17(3), 32"
+        },
+        {
+          "source": "whw",
+          "location": "Art. 7.12, 7.12b"
+        }
+      ],
+      "questions": [
+        {
+          "id": "e01-1",
+          "statement": "The examination board’s statutory duties permit it to see every student’s health information without a necessity assessment.",
+          "answer": false,
+          "explanation": "Access must still be justified and minimized; health data have extra protection.",
+          "references": [
+            {
+              "source": "whw",
+              "location": "Art. 7.12, 7.12b"
+            },
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(c), 9"
+            }
+          ]
+        },
+        {
+          "id": "e01-2",
+          "statement": "A student’s erasure request can be limited by an applicable statutory retention obligation.",
+          "answer": true,
+          "explanation": "Article 17(3)(b) may apply where processing is necessary to comply with a legal obligation.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 17(3)(b)"
+            }
+          ]
+        },
+        {
+          "id": "e01-3",
+          "statement": "The examination board has a statutory role in determining whether degree requirements are met.",
+          "answer": true,
+          "explanation": "This follows from WHW Article 7.12(2).",
+          "references": [
+            {
+              "source": "whw",
+              "location": "Art. 7.12(2)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e02",
+      "module": "education",
+      "title": "Learning analytics, proctoring and accommodations",
+      "level": "Advanced",
+      "objective": "Assess monitoring and sensitive student data.",
+      "concepts": [
+        "Learning analytics and remote proctoring can involve profiling or systematic monitoring. A DPIA may be required where high risk is likely.",
+        "Information about disability or health is special-category data. An applicable Article 9 condition is required; access must be minimized.",
+        "AI intended to detect prohibited behavior during tests is listed in Annex III(3)(d); Article 6 classification and the updated implementation calendar matter."
+      ],
+      "example": "A faculty compares invasive webcam monitoring with less intrusive assessment methods and considers the impact on students with disabilities.",
+      "nuance": "Consent may be difficult to establish as freely given when students lack a genuine choice. Assess alternatives rather than assuming consent resolves monitoring risks.",
+      "terms": {
+        "leeranalyses": "learning analytics",
+        "bijzondere persoonsgegevens": "special-category personal data"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 5, 7, 9, 35; Recitals 43, 75, 91"
+        },
+        {
+          "source": "ai",
+          "location": "Art. 6; Annex III(3)(d)"
+        },
+        {
+          "source": "omnibus",
+          "location": "Art. 1 (Art. 113 amendment)"
+        }
+      ],
+      "questions": [
+        {
+          "id": "e02-1",
+          "statement": "Student disability information can constitute special-category health data.",
+          "answer": true,
+          "explanation": "Information revealing physical or mental health is covered by Article 9.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 4(15), 9(1)"
+            }
+          ]
+        },
+        {
+          "id": "e02-2",
+          "statement": "A mandatory proctoring checkbox necessarily establishes freely given GDPR consent.",
+          "answer": false,
+          "explanation": "A lack of real choice can undermine consent.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 4(11), 7; Recital 43"
+            }
+          ]
+        },
+        {
+          "id": "e02-3",
+          "statement": "AI intended to monitor prohibited behavior during examinations is explicitly listed in Annex III.",
+          "answer": true,
+          "explanation": "Annex III(3)(d) lists this use; Article 6 and transition dates still matter.",
+          "references": [
+            {
+              "source": "ai",
+              "location": "Annex III(3)(d); Art. 6"
+            },
+            {
+              "source": "omnibus",
+              "location": "Art. 1 (Art. 113 amendment)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e03",
+      "module": "education",
+      "title": "AI-assisted admissions and grading",
+      "level": "Advanced",
+      "objective": "Distinguish high-risk AI classification, human review and automated decisions.",
+      "concepts": [
+        "AI intended to determine access/admission or evaluate learning outcomes can be listed high-risk under Annex III(3), subject to Article 6.",
+        "GDPR Article 22 applies to solely automated significant decisions, with specific exceptions and safeguards. A human rubber stamp may not amount to genuine human involvement.",
+        "AI Act human oversight and GDPR automated-decision rules are separate requirements. High-risk application deadlines do not postpone GDPR."
+      ],
+      "example": "A course uses an AI-generated grading suggestion. A qualified examiner independently evaluates the work and can change the proposed result.",
+      "nuance": "Human review can matter for Article 22 but does not automatically remove an AI system from Annex III classification.",
+      "terms": {
+        "geautomatiseerde besluitvorming": "automated decision-making",
+        "menselijk toezicht": "human oversight"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 22; Recital 71"
+        },
+        {
+          "source": "ai",
+          "location": "Art. 6, 14, 26; Annex III(3)(a)–(b)"
+        },
+        {
+          "source": "omnibus",
+          "location": "Art. 1 (Art. 113 amendment)"
+        }
+      ],
+      "questions": [
+        {
+          "id": "e03-1",
+          "statement": "Adding an examiner’s approval button automatically makes the decision non-automated under GDPR.",
+          "answer": false,
+          "explanation": "Actual meaningful involvement matters, not a nominal approval step.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 22(1); Recital 71"
+            }
+          ]
+        },
+        {
+          "id": "e03-2",
+          "statement": "An AI system evaluating learning outcomes can fall within Annex III even when an examiner reviews its output.",
+          "answer": true,
+          "explanation": "Human review does not itself settle Article 6 classification.",
+          "references": [
+            {
+              "source": "ai",
+              "location": "Art. 6; Annex III(3)(b)"
+            }
+          ]
+        },
+        {
+          "id": "e03-3",
+          "statement": "The delayed AI Act high-risk deadline suspends GDPR Article 22 for university grading.",
+          "answer": false,
+          "explanation": "GDPR applies independently.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 22"
+            },
+            {
+              "source": "omnibus",
+              "location": "Art. 1 (Art. 113 amendment)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "o01",
+      "module": "operations",
+      "title": "Procurement, cloud services and subprocessors",
+      "level": "Intermediate",
+      "objective": "Recognize controller duties and processor chains.",
+      "concepts": [
+        "A processor contract must include Article 28 requirements, including instructions, confidentiality, security, assistance and return/deletion provisions.",
+        "A processor needs specific or general written authorization before engaging another processor. General authorization requires notice of intended changes and opportunity to object.",
+        "Where a supplier uses data for its own purposes, its role for that activity must be assessed separately."
+      ],
+      "example": "A university procures cloud transcription software. It investigates whether recordings are used for vendor training, who has access and where processing takes place.",
+      "nuance": "An EU server location is not proof that all processing, support or transfers stay within the EEA.",
+      "terms": {
+        "subverwerker": "subprocessor",
+        "verwerkersovereenkomst": "data processing agreement"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 28(2)–(4), 28(10), 32, 44; Recital 81"
+        }
+      ],
+      "questions": [
+        {
+          "id": "o01-1",
+          "statement": "A processor can engage a subprocessor without any written authorization if it remains responsible for the service.",
+          "answer": false,
+          "explanation": "Article 28(2) requires specific or general written authorization.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 28(2)"
+            }
+          ]
+        },
+        {
+          "id": "o01-2",
+          "statement": "Under general authorization, intended subprocessor changes must be communicated so the controller can object.",
+          "answer": true,
+          "explanation": "Article 28(2) explicitly requires this opportunity.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 28(2)"
+            }
+          ]
+        },
+        {
+          "id": "o01-3",
+          "statement": "An EU hosting address establishes that every remote support activity remains in the EEA.",
+          "answer": false,
+          "explanation": "Access arrangements and actual recipients must be checked separately.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 28, 44–49"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "o02",
+      "module": "operations",
+      "title": "Staff monitoring, recruitment and health data",
+      "level": "Advanced",
+      "objective": "Apply GDPR and AI Act concepts to employment.",
+      "concepts": [
+        "Employee data processing requires a lawful basis and proportionality. Employment power imbalance can undermine freely given consent.",
+        "Health and absence-related data may be special-category data; Dutch law contains limited exceptions. Do not infer unrestricted employer access.",
+        "AI for recruitment, selection or specified worker-management decisions is listed in Annex III(4); workplace emotion inference is generally prohibited subject to the medical/safety exception."
+      ],
+      "example": "HR considers an AI tool to rank applicants and a dashboard to track employees’ behavior. Each purpose and technology requires its own legal assessment.",
+      "nuance": "High-risk obligations apply according to the updated calendar, while prohibited practices and GDPR already apply.",
+      "terms": {
+        "werknemersgegevens": "employee data",
+        "ziekteverzuim": "sickness absence"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 5–7, 9, 22, 35; Recital 43"
+        },
+        {
+          "source": "uavg",
+          "location": "Art. 30"
+        },
+        {
+          "source": "ai",
+          "location": "Art. 5(1)(f), 6; Annex III(4)"
+        },
+        {
+          "source": "omnibus",
+          "location": "Art. 1 (Art. 113 amendment)"
+        }
+      ],
+      "questions": [
+        {
+          "id": "o02-1",
+          "statement": "An employment contract makes any form of employee monitoring necessary for contract performance.",
+          "answer": false,
+          "explanation": "Necessity and proportionality must be established for the specific processing.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(c), 6(1)(b)"
+            }
+          ]
+        },
+        {
+          "id": "o02-2",
+          "statement": "AI intended to rank job applicants can be listed high-risk under the AI Act.",
+          "answer": true,
+          "explanation": "Recruitment and selection are included in Annex III(4)(a).",
+          "references": [
+            {
+              "source": "ai",
+              "location": "Art. 6; Annex III(4)(a)"
+            }
+          ]
+        },
+        {
+          "id": "o02-3",
+          "statement": "An employer’s legitimate interest alone is enough to process special-category health data.",
+          "answer": false,
+          "explanation": "An applicable Article 9 condition is also required.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6, 9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "o03",
+      "module": "operations",
+      "title": "Breaches, responsibilities and oversight",
+      "level": "Intermediate",
+      "objective": "Distinguish institutional accountability from specialist duties.",
+      "concepts": [
+        "A personal data breach can concern confidentiality, integrity or availability. Controllers document breaches and notify the authority unless risk to individuals is unlikely.",
+        "Where notification is required, the controller must notify without undue delay and, where feasible, within 72 hours after awareness. Processors notify controllers without undue delay.",
+        "The DPO advises and monitors independently. The controller remains accountable. A high-risk breach may also require communication to affected individuals."
+      ],
+      "example": "An email with student records goes to the wrong recipient. The university assesses risk, documents the event and determines whether notification is required.",
+      "nuance": "Not every security incident is a personal data breach, and not every breach requires notification. Internal reporting deadlines can be stricter.",
+      "terms": {
+        "datalek": "personal data breach",
+        "toezichthouder": "supervisory authority"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 4(12), 33–34, 37–39; Recitals 85–88, 97"
+        }
+      ],
+      "questions": [
+        {
+          "id": "o03-1",
+          "statement": "A controller must document personal data breaches even when notification to the authority is not required.",
+          "answer": true,
+          "explanation": "Article 33(5) requires documentation of breaches and relevant facts.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 33(5)"
+            }
+          ]
+        },
+        {
+          "id": "o03-2",
+          "statement": "A processor has the same 72-hour statutory notification deadline to the authority as a controller.",
+          "answer": false,
+          "explanation": "The processor must notify the controller without undue delay; the controller assesses authority notification.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 33(1), 33(2)"
+            }
+          ]
+        },
+        {
+          "id": "o03-3",
+          "statement": "Appointing a DPO transfers the controller’s responsibility for compliance to the DPO.",
+          "answer": false,
+          "explanation": "The DPO advises and monitors; accountability remains with the controller.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(2), 24, 39"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
