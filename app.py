@@ -181,6 +181,28 @@ if st.session_state.nav!='Home':
 st.session_state.nav_widget=st.session_state.nav
 st.selectbox('Navigate',pages,key='nav_widget',on_change=change_nav)
 page=st.session_state.nav
+if page in ('Learn','Quiz','Legal library'):
+    # Reading size is independent of the navigation and dashboard layout.
+    if 'reading_size' not in st.session_state:
+        st.session_state.reading_size=22
+    def adjust_reading_size(delta):
+        st.session_state.reading_size=max(18,min(32,st.session_state.reading_size+delta))
+    size=st.session_state.reading_size
+    st.markdown("""
+    <style>
+    [data-testid="stMarkdownContainer"] p,
+    [data-testid="stMarkdownContainer"] li,
+    [data-testid="stMarkdownContainer"] a {
+        font-size: %dpx !important; line-height: 1.65 !important;
+    }
+    [data-testid="stMarkdownContainer"] strong,
+    [data-testid="stMarkdownContainer"] em { font-size: inherit !important; }
+    </style>
+    """ % size, unsafe_allow_html=True)
+    minus,plus,status=st.columns([1,1,2])
+    minus.button('A−',key='reading_smaller',help='Decrease reading text size',disabled=size<=18,on_click=adjust_reading_size,args=(-2,),use_container_width=True)
+    plus.button('A+',key='reading_larger',help='Increase reading text size',disabled=size>=32,on_click=adjust_reading_size,args=(2,),use_container_width=True)
+    status.caption(f'Reading size: {size} px')
 if page=='Home':
     c1,c2,c3=st.columns(3); c1.metric('Day streak',streak(p)); c2.metric('Lessons read',f"{len(p['read'])}/{len(LESSONS)}"); c3.metric('Quiz passed',f"{sum(mastered(l,p) for l in LESSONS.values())}/{len(LESSONS)}")
     if p['last'] and st.button('Resume last lesson',use_container_width=True): open_lesson(p['last'])
