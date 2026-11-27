@@ -125,6 +125,25 @@ st.markdown("""
     .study-hero { padding: 1.3rem 1.15rem; border-radius: 13px; }
     [data-testid="stMetric"] { padding: .55rem .65rem; }
 }
+
+/* Readable study typography on desktop and mobile. */
+html { font-size: 19px !important; }
+[data-testid="stMarkdownContainer"] p,
+[data-testid="stMarkdownContainer"] li,
+[data-testid="stMarkdownContainer"] a { font-size: 1rem; line-height: 1.65; }
+[data-testid="stCaptionContainer"] p { font-size: .88rem; line-height: 1.5; }
+[data-testid="stWidgetLabel"] p,
+[data-testid="stRadio"] label p,
+[data-baseweb="select"] { font-size: 1rem !important; }
+.stButton button p, .stFormSubmitButton button p,
+[data-testid="stDownloadButton"] button p { font-size: 1rem; }
+.study-hero p { font-size: 1rem; }
+.study-kicker, .study-module-tag { font-size: .8rem; }
+@media (max-width: 640px) {
+    html { font-size: 18px !important; }
+    [data-testid="stMarkdownContainer"] p,
+    [data-testid="stMarkdownContainer"] li { line-height: 1.6; }
+}
 </style>
 <div class="study-hero">
     <div class="study-kicker">Personal learning studio</div>
