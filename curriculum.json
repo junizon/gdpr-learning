@@ -1,5 +1,5 @@
 {
-  "version": "1.2",
+  "version": "1.3",
   "reviewed": "2026-11-28",
   "sources": {
     "gdpr": {
@@ -133,7 +133,8 @@
         "Anonymity requires considering means reasonably likely to be used to identify a person, taking account of context and available technology.",
         "**What makes data personal?** Consider content, purpose and effect. A record may relate to a person because it describes them, is used to evaluate them or affects their treatment. An opinion or inaccurate inference can therefore be personal data too. Identifiability is not limited to whether the file contains a name.",
         "**Context and linkage.** A student identifier, IP address or unusual combination of demographic variables may allow identification through other reasonably accessible information. Recital 26 directs attention to practical means, costs, time and technological developments. Different recipients can have different identification capabilities.",
-        "**Anonymization is an outcome.** Removing direct identifiers is a first step. Consider singling out, linking records and inferring characteristics. Small cells, rare diagnoses, recordings and verbatim quotations can reveal identities. Test disclosure risk before publishing; do not assume aggregate data are always anonymous."
+        "**Anonymization is an outcome.** Removing direct identifiers is a first step. Consider singling out, linking records and inferring characteristics. Small cells, rare diagnoses, recordings and verbatim quotations can reveal identities. Test disclosure risk before publishing; do not assume aggregate data are always anonymous.",
+        "**Territorial scope and exceptions.** The GDPR can apply to processing in the context of an EU establishment even if processing happens elsewhere (Article 3(1)). Article 3(2) also covers specified activities of organizations outside the EU, including offering goods or services to people in the Union or monitoring their behavior there. The nationality of the person is not the test. Article 2 also limits material scope: automated personal data processing and non-automated processing forming part of a filing system are covered, subject to statutory exceptions. A university study is not normally a purely personal or household activity."
       ],
       "example": "A researcher wants to publish coded interview transcripts. Names have been removed, but a participant describes their unique role in a small academic department. Another dataset contains only sufficiently aggregated survey totals. Consider what a reader with local knowledge could infer in each case.",
       "nuance": "Identifiability is contextual. Removing direct identifiers does not establish that a dataset is anonymous; consider linkage and small groups.",
@@ -220,6 +221,30 @@
               "location": "Recital 26"
             }
           ]
+        },
+        {
+          "id": "g01-7",
+          "statement": "A Dutch university's processing in the context of its EU establishment can remain subject to GDPR when a service runs on a server outside the EU.",
+          "answer": true,
+          "explanation": "Article 3(1) applies regardless of whether the processing takes place in the Union; Chapter V may separately apply.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 3(1), 44"
+            }
+          ]
+        },
+        {
+          "id": "g01-8",
+          "statement": "A researcher who keeps structured participant records at home can invoke the household exception merely because the files are stored at home.",
+          "answer": false,
+          "explanation": "The exception concerns purely personal or household activities, not the physical location of professional research.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 2(2)(c)"
+            }
+          ]
         }
       ]
     },
@@ -236,7 +261,8 @@
         "**How to study this topic.** The following eleven lessons separate the individual principles and lawful bases. In practice, start with a defined purpose, identify an applicable basis, check all Article 5 principles, then assess additional conditions (including Article 9, if relevant). These tests are cumulative, not alternatives.",
         "**Legal hierarchy.** Read the operative articles first, then the associated recitals for context. Regulatory guidance and judgments assist interpretation; a local university rule can establish a process or retention schedule but cannot override binding law.",
         "**A practical sequence.** Define the purpose before choosing the lawful basis. Next test necessity, assess all principles, identify whether Article 9 or 10 applies, and consider transparency, retention, rights and security. A lawful basis is not a permission to ignore these other constraints.",
-        "**A university has many purposes.** Examination administration, voluntary alumni communications and employee recruitment need not rely on the same basis. A university's legal status or mission does not establish a basis for every data use. The eleven dedicated lessons that follow examine each element in detail."
+        "**A university has many purposes.** Examination administration, voluntary alumni communications and employee recruitment need not rely on the same basis. A university's legal status or mission does not establish a basis for every data use. The eleven dedicated lessons that follow examine each element in detail.",
+        "**Legal reading exercise.** Article 5 establishes cumulative principles. Article 6 determines whether there is an appropriate lawful basis. Article 9 introduces a separate prohibition with defined exceptions. Article 24 addresses the controller's responsibility. When reading a case, mark which legal question each provision answers. Do not treat risk mitigation, contractual permission or ethics approval as substitutes for lawfulness."
       ],
       "example": "A university collects only details necessary to administer enrollment under its relevant legal duties.",
       "nuance": "A university cannot assume that every activity is a public task. Identify the actual purpose and legal basis; Article 6(1)(f) is unavailable to public authorities when performing their tasks.",
@@ -327,6 +353,30 @@
               "location": "Art. 5(2)"
             }
           ]
+        },
+        {
+          "id": "g02-7",
+          "statement": "A department can meet the accountability principle by documenting that no valid lawful basis exists and proceeding anyway.",
+          "answer": false,
+          "explanation": "Accountability requires compliance and demonstrability, not simply recording noncompliance.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(2), 6"
+            }
+          ]
+        },
+        {
+          "id": "g02-8",
+          "statement": "A retention period based on applicable law can be relevant even where the original processing relied on a different lawful basis.",
+          "answer": true,
+          "explanation": "Retention for a legal obligation must be assessed separately from the original purpose and basis.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(e), 6(1)(c), 17(3)(b)"
+            }
+          ]
         }
       ]
     },
@@ -340,7 +390,8 @@
         "**Three distinct tests.** Lawfulness asks whether the processing has a valid basis and satisfies applicable legal conditions. Fairness asks whether the way people are treated is justified, including their reasonable expectations and the consequences for them. Transparency asks whether individuals can understand the processing. Meeting one test does not automatically meet the others.",
         "**Read the law.** Start with Article 5(1)(a), then Articles 12–14. Article 12 concerns understandable and accessible communication. Article 13 applies to collection from the individual, while Article 14 addresses other sources, subject to its own exceptions and timing.",
         "**Information is not consent.** A privacy notice explains what happens; it is not itself a lawful basis. If the university relies on a legal obligation, asking a student to accept a notice does not change the legal basis. If it relies on consent, the separate Article 7 requirements must be met.",
-        "**Fairness in practice.** A system may technically comply with a stated purpose but still disadvantage a group through inaccurate inputs or unexpected use. Examine the actual consequences, available alternatives and whether the person could reasonably anticipate the processing."
+        "**Fairness in practice.** A system may technically comply with a stated purpose but still disadvantage a group through inaccurate inputs or unexpected use. Examine the actual consequences, available alternatives and whether the person could reasonably anticipate the processing.",
+        "**Distinguish a notice from actual understanding.** A student-facing notice should describe meaningful purposes, the legal basis, recipients or their categories, retention information and rights as required by Article 13. When data are not obtained from the person, Article 14 has its own information list and timing. For example, an analysis of records acquired from a previous institution may require explaining the source and categories of data. Layered information can improve accessibility, but the complete required information must remain available. A notice that uses generic wording about all possible university activities may technically be long yet fail to communicate what is actually happening."
       ],
       "example": "A course platform collects activity logs for technical support. The university wants to use them to identify supposedly disengaged students and send alerts to teachers. A general privacy notice about platform administration does not by itself resolve the new purpose, lawful basis, proportionality or risk of incorrect inferences. Compare a voluntary support service with a system that affects assessment.",
       "nuance": "Transparency does not require publishing other people's personal data or confidential technical details indiscriminately. Article 14 exceptions must be assessed rather than assumed; a difficult notification process alone does not create an exemption.",
@@ -427,6 +478,30 @@
               "location": "Art. 6(1)(c), 13"
             }
           ]
+        },
+        {
+          "id": "g06-7",
+          "statement": "A privacy notice for data obtained from another institution must be assessed under Article 14 rather than assuming Article 13 alone is sufficient.",
+          "answer": true,
+          "explanation": "Article 14 governs indirect collection and has specific information and timing requirements, subject to exceptions.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 14"
+            }
+          ]
+        },
+        {
+          "id": "g06-8",
+          "statement": "A university relying on a lawful basis may omit retention information from its collection notice solely because the notice is intended to be short.",
+          "answer": false,
+          "explanation": "Article 13(2)(a) requires the storage period or criteria for determining it; readability does not remove that requirement.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 13(2)(a)"
+            }
+          ]
         }
       ]
     },
@@ -440,7 +515,8 @@
         "**Start with the objective.** A purpose is the reason for processing, not the software, the data format or the department involved. A vague label such as improving education is not enough to explain why particular data are needed. Write a purpose at a level that permits a meaningful necessity assessment.",
         "**A new use is a separate question.** Article 6(4) identifies compatibility factors when further processing is not based on consent or qualifying EU or national law: the relationship between purposes, the collection context, the nature of the data, consequences and safeguards. Recital 50 explains the rationale. Compatible processing does not automatically need a separate basis from the original one, but the original basis must actually support the continued processing.",
         "**Research is special, not unrestricted.** Article 5(1)(b) treats further processing for scientific research as compatible subject to Article 89(1). The research purpose must be genuine and safeguards appropriate. The research rule does not erase Article 9 conditions, transparency duties or legal restrictions.",
-        "**Document a change.** Identify the proposed new objective, what data it needs, who gets access, what individuals were told and what consequences are possible. Where required, inform individuals before processing for a new purpose."
+        "**Document a change.** Identify the proposed new objective, what data it needs, who gets access, what individuals were told and what consequences are possible. Where required, inform individuals before processing for a new purpose.",
+        "**A further-processing exercise.** Suppose a student service collects phone numbers for appointment reminders. It later wants to share the numbers with a project studying student well-being. Identify who originally collected them, what students were told, whether the proposed study genuinely needs phone numbers, whether a separate controller would receive them and how recruitment would be organized. Then distinguish the compatibility issue from the basis for disclosure and collection, the information duties and research safeguards. A compatibility presumption for a genuine research purpose is not the same as a general entitlement to access every existing record."
       ],
       "example": "A university collected exam marks to determine whether students passed. A team wants to study whether teaching methods affect outcomes. Compare research using coded marks with an operational dashboard that predicts which individual students should be excluded from a course. The two proposed uses have different purposes, consequences and safeguards.",
       "nuance": "Article 6(4) is not itself a seventh lawful basis. Where the proposed use is outside what the original consent covers, do not treat a compatibility analysis as a way to bypass consent restrictions.",
@@ -526,6 +602,30 @@
               "location": "Art. 6(4)"
             }
           ]
+        },
+        {
+          "id": "g07-7",
+          "statement": "The possible consequences for individuals belong in the compatibility assessment, alongside the relationship between the old and new purposes.",
+          "answer": true,
+          "explanation": "Article 6(4) specifically identifies both factors.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(4)(a), (d)"
+            }
+          ]
+        },
+        {
+          "id": "g07-8",
+          "statement": "Labeling an individual student intervention dashboard as research automatically makes its operational decisions compatible with the original purpose.",
+          "answer": false,
+          "explanation": "The actual purpose and safeguards matter; operational intervention cannot simply borrow a research label.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(b), 89"
+            }
+          ]
         }
       ]
     },
@@ -539,7 +639,8 @@
         "**Minimize relative to purpose.** Article 5(1)(c) requires an appropriate relationship between the data collected and the specified purpose. The smallest possible dataset is not always sufficient; the correct question is whether each element is justified. Inadequate data can also lead to unreliable decisions.",
         "**Consider alternatives.** Compare full dates of birth with age bands, recorded interviews with notes, continuous monitoring with targeted checks and raw records with statistics. Ask whether a less intrusive approach would achieve the same objective effectively. Cost or convenience alone is not a blanket justification.",
         "**Minimization extends beyond fields.** Article 25(2) addresses the amount collected, extent of processing, storage and accessibility. Restrict access by role and purpose. A legitimate need for one staff member does not justify access by an entire faculty.",
-        "**Research design matters.** Scientific validity may require granular variables or longitudinal linkage. Justify such choices based on the research question and methodology, then limit unnecessary identifiers, separate linkage keys and consider later aggregation."
+        "**Research design matters.** Scientific validity may require granular variables or longitudinal linkage. Justify such choices based on the research question and methodology, then limit unnecessary identifiers, separate linkage keys and consider later aggregation.",
+        "**Work through the necessity test.** Imagine a project comparing students' attendance with exam outcomes. The team needs longitudinal linkage, but not names during statistical analysis. Separating linkage from analysis may preserve validity while reducing exposure. Ask why each variable, degree of precision, access right and retention period is needed. If the linkage key must be retained for follow-up, document why and restrict the people who can access it. This is a more useful assessment than simply counting columns: one recording containing a face and voice may be more intrusive than several coded survey variables."
       ],
       "example": "A study needs to compare performance across age groups. The team requests exact dates of birth, addresses and full student names. If only age bands and a study identifier are needed, those alternatives should be considered. A second study may genuinely need exact age at each measurement; that different purpose could justify greater precision.",
       "nuance": "Minimization does not mean deliberately collecting inadequate information or destroying records that must be retained. It requires a defensible link between the specific purpose and the amount, precision and accessibility of data.",
@@ -626,6 +727,30 @@
               "location": "Art. 5, 6"
             }
           ]
+        },
+        {
+          "id": "g08-7",
+          "statement": "A project can minimize access by keeping its necessary linkage key separate from the analysis dataset.",
+          "answer": true,
+          "explanation": "Article 25 and Article 89 support design choices that limit identification and access while retaining required functionality.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 25, 89(1)"
+            }
+          ]
+        },
+        {
+          "id": "g08-8",
+          "statement": "A requirement to keep a linkage key for a justified follow-up study implies that every analyst needs access to it.",
+          "answer": false,
+          "explanation": "Necessity for retention is distinct from necessity for access.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(c), 25(2)"
+            }
+          ]
         }
       ]
     },
@@ -639,7 +764,8 @@
         "**Accuracy depends on purpose.** Correct an inaccurate current address used to send official correspondence. A historical address in a record of what was reported at an earlier time may be accurate as a historical fact. Record corrections and context rather than silently rewriting evidence.",
         "**Reasonable steps.** The controller must take reasonable measures to correct or erase inaccurate data relevant to the purpose. Consider who entered a value, how it is checked, how the person can challenge it and whether downstream recipients need to be informed.",
         "**Retention is purpose-specific.** Identify when the purpose ends, relevant statutory or contractual constraints, review dates and disposal methods. Different parts of a student file or research project may need different retention periods. GDPR does not create a general ten-year rule.",
-        "**Longer research storage.** Article 5(1)(e) allows extended retention when processing is solely for specified archiving, research or statistical purposes, subject to Article 89 safeguards. This is not a general permission to retain all operational data indefinitely."
+        "**Longer research storage.** Article 5(1)(e) allows extended retention when processing is solely for specified archiving, research or statistical purposes, subject to Article 89 safeguards. This is not a general permission to retain all operational data indefinitely.",
+        "**Separate the schedule from the disposal method.** A retention schedule should identify what starts the retention period, who owns the record, when review is needed and what happens at expiry. Deletion from the visible application does not necessarily mean removal from every archive or backup. Conversely, an immutable backup may be subject to a controlled expiry process rather than immediate record-by-record deletion. The controller must evaluate the actual architecture and obligations. If identifiable information is no longer necessary but scientific results should be preserved, consider effective anonymization rather than indefinite retention of the original data."
       ],
       "example": "An exam board retains the formal result and decision record while an assessment platform also stores webcam recordings and working notes. Compare the necessity and legal retention basis of each category. A decision record may need to be preserved while intrusive monitoring data may not.",
       "nuance": "Rectification does not necessarily mean deleting a disputed professional opinion; distinguish accurate recording of an opinion from inaccurate underlying facts, and consider adding a supplementary statement under Article 16.",
@@ -726,6 +852,30 @@
               "location": "Art. 5(1)(d)"
             }
           ]
+        },
+        {
+          "id": "g09-7",
+          "statement": "A retention policy can specify criteria for determining the retention period rather than a single number for every record.",
+          "answer": true,
+          "explanation": "Purpose-based criteria are legitimate and are specifically contemplated by the transparency rules.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(e), 13(2)(a)"
+            }
+          ]
+        },
+        {
+          "id": "g09-8",
+          "statement": "Moving identifiable records into an archive automatically removes them from the storage-limitation principle.",
+          "answer": false,
+          "explanation": "Archiving is still processing personal data; longer retention must meet applicable conditions.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(e), 89"
+            }
+          ]
         }
       ]
     },
@@ -739,7 +889,8 @@
         "**Three security dimensions.** Confidentiality concerns unauthorized disclosure or access; integrity concerns unauthorized or accidental alteration; availability concerns loss of access. Security is broader than preventing hackers from reading data.",
         "**Risk-based measures.** Article 32 requires measures suited to the risks, considering technical possibilities, implementation costs, processing context and risks to individuals. Encryption, access restrictions, resilient backups and periodic testing are examples, not an identical mandatory checklist for every activity.",
         "**Institutional context.** A research dataset containing health observations may require more stringent access management than a public event registration list. Evaluate both the likelihood and severity of harm, including re-identification and inappropriate sharing.",
-        "**Verify controls.** A policy or supplier promise is not proof that a safeguard works. Consider permission reviews, restoration tests, incident reporting, secure deletion and whether staff know how to use the system safely."
+        "**Verify controls.** A policy or supplier promise is not proof that a safeguard works. Consider permission reviews, restoration tests, incident reporting, secure deletion and whether staff know how to use the system safely.",
+        "**Security scenario analysis.** Suppose a vendor reports that a staff account was compromised, but cannot yet establish which files were accessed. Review what the account could reach, how access logs are retained, whether authentication was robust, whether sensitive records were encrypted and how access can be contained. The risk to individuals depends on the data, recipients, ability to identify people and potential consequences. Do not confuse an absence of evidence with evidence that unauthorized disclosure did not occur. Assess incident response and notification separately from the long-term security measures."
       ],
       "example": "A thesis dataset is accidentally deleted. A backup exists but cannot be restored, and the original files are unavailable. This is an availability problem and may constitute a personal data breach even if no unauthorized person received a copy. Assess separately whether authority notification and individual communication are required.",
       "nuance": "Encryption is valuable but not synonymous with anonymity. Lost encrypted devices may present lower confidentiality risk, but other dimensions and the actual accessibility of the data must still be examined.",
@@ -826,6 +977,30 @@
               "location": "Art. 24, 28, 32"
             }
           ]
+        },
+        {
+          "id": "g10-7",
+          "statement": "Article 32 considers the risk of accidental destruction or alteration, not just unauthorized disclosure.",
+          "answer": true,
+          "explanation": "The security assessment encompasses confidentiality, integrity and availability risks.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 32(2)"
+            }
+          ]
+        },
+        {
+          "id": "g10-8",
+          "statement": "Limiting account permissions is unnecessary once a university has encrypted the storage device.",
+          "answer": false,
+          "explanation": "Encryption and access control address different risk pathways; safeguards must suit the processing.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 25, 32"
+            }
+          ]
         }
       ]
     },
@@ -839,7 +1014,8 @@
         "**Accountability has two components.** The controller must comply with the Article 5 principles and be able to demonstrate that compliance. A signed form is not enough if actual access, retention or data use contradicts it.",
         "**Evidence follows the risk.** A routine administrative process may be documented through a processing record, lawful-basis reasoning and established controls. Higher-risk monitoring may need a DPIA, a decision on alternatives, stronger controls and periodic review. Avoid paperwork that duplicates an existing valid assessment.",
         "**Roles differ.** The controller is responsible for compliance. The DPO provides independent advice and monitoring; the processor implements its own applicable obligations and follows instructions. A university can allocate operational tasks internally without transferring its legal accountability to a coordinator.",
-        "**Accountability is ongoing.** New purposes, new recipients, changed software, access from another country or substantially changed risks can require reassessment. Keep decisions and safeguards current rather than treating approval as permanent."
+        "**Accountability is ongoing.** New purposes, new recipients, changed software, access from another country or substantially changed risks can require reassessment. Keep decisions and safeguards current rather than treating approval as permanent.",
+        "**Use a chain of evidence.** A credible governance record connects the purpose and legal basis to the data inventory, actual system configuration, named responsibility, applicable agreement, risk assessment and review date. For example, a claim that only researchers have access should be checked against actual permission groups, including administrators and support providers. If the university changes providers but retains the same purpose, the legal basis may not change, while the DPA, recipients, transfer assessment and security measures may need review. Accountability is about keeping the evidence aligned with reality, not producing a new form for every change."
       ],
       "example": "A university introduced a course platform several years ago. A vendor adds an AI feature that uses student interactions for analytics. An old DPA and an old risk assessment may still be useful, but they must be compared with the new functionality. The process owner should identify changes and involve the appropriate specialists.",
       "nuance": "An Article 30 record describes processing; a DPIA assesses high risks. Neither document replaces the other when both are required. The DPO must be involved appropriately and independently, not made responsible for approving their own monitored decisions.",
@@ -925,6 +1101,30 @@
               "location": "Art. 24, 28"
             }
           ]
+        },
+        {
+          "id": "g11-7",
+          "statement": "An organization can use existing relevant governance records to demonstrate compliance rather than creating duplicate documents.",
+          "answer": true,
+          "explanation": "Articles 5(2) and 24 require demonstrable compliance and appropriate measures, not unnecessary duplicated paperwork.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(2), 24"
+            }
+          ]
+        },
+        {
+          "id": "g11-8",
+          "statement": "The fact that a processing purpose stays unchanged means a supplier change cannot affect accountability documentation.",
+          "answer": false,
+          "explanation": "Recipients, contracts, security and transfer arrangements may change independently of purpose.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 24, 28, 30, 44"
+            }
+          ]
         }
       ]
     },
@@ -939,7 +1139,8 @@
         "**Contract (b).** Processing necessary to perform a contract with the individual, or take requested pre-contract steps. Merely including a processing activity in contract terms does not make it necessary.",
         "**Legal obligation (c) and public task (e).** Both need a basis in EU or member-state law under Article 6(3). A specific legal duty is different from processing necessary for a legally grounded public-interest task. Identify the actual relevant duty or task.",
         "**Vital interests (d).** Protects vital interests of an individual, typically urgent or serious situations. It is not a general basis for institutional safety administration. Recital 46 explains that another basis may be preferable when available.",
-        "**Legitimate interests (f).** Requires a legitimate interest, necessity and balancing against individual interests and rights. Public authorities cannot rely on it when performing their tasks. Article 9 conditions are additional where special categories are processed."
+        "**Legitimate interests (f).** Requires a legitimate interest, necessity and balancing against individual interests and rights. Public authorities cannot rely on it when performing their tasks. Article 9 conditions are additional where special categories are processed.",
+        "**Compare the two statutory bases carefully.** Article 6(1)(c) concerns a legal obligation to which the controller is subject. Article 6(1)(e) concerns necessary processing for a public-interest task or official authority. Both need a legal foundation under Article 6(3), but a law may establish a task without requiring each individual operation. For a Dutch university, identify the provision, the institutional function and the necessity of the actual data use. Rights can differ depending on the basis: Article 21(1) objection explicitly applies to public task and legitimate interests; Article 20 portability has different conditions. This is one reason the basis is not merely an administrative label."
       ],
       "example": "Compare a student grade record required by law, an optional alumni newsletter, a requested service contract and disclosure of essential information during a medical emergency. The four activities have different purposes and possible legal bases. Determine the actual conditions rather than assigning one basis to the entire university.",
       "nuance": "A controller must determine and communicate the appropriate basis before processing. Do not select multiple speculative bases merely as fallbacks. Different processing operations can legitimately have different bases.",
@@ -1026,6 +1227,30 @@
               "location": "Art. 6(1)"
             }
           ]
+        },
+        {
+          "id": "g12-7",
+          "statement": "Article 20 portability can apply to automated processing based on contract, provided the other conditions are met.",
+          "answer": true,
+          "explanation": "Contract is one of the specified bases in Article 20(1).",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 20(1)"
+            }
+          ]
+        },
+        {
+          "id": "g12-8",
+          "statement": "Legal obligation and public task are interchangeable because they both require a basis in law.",
+          "answer": false,
+          "explanation": "They have different statutory conditions and can have different implications for rights.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(1)(c), (e), 6(3), 21"
+            }
+          ]
         }
       ]
     },
@@ -1039,7 +1264,8 @@
         "**Four characteristics.** Consent must be freely given, specific, informed and unambiguous. Silence, inactivity or a preselected option does not establish affirmative consent. Explicit consent under Article 9(2)(a) requires a heightened expression.",
         "**Freedom and dependency.** Students may fear academic consequences and employees may fear disadvantage. Recital 43 highlights power imbalances. A university must assess whether refusal or withdrawal can occur without detriment; consent is not categorically impossible in every university relationship.",
         "**Separate purposes.** A student may agree to appear in an optional promotional video but decline later marketing use. Choices should reflect distinct purposes when appropriate; bundling unrelated purposes can undermine freedom and specificity.",
-        "**Withdrawal.** Withdrawal must be as easy as giving consent. It affects future consent-based processing, not the lawfulness of processing before withdrawal. Separate legal obligations and retention requirements need their own analysis."
+        "**Withdrawal.** Withdrawal must be as easy as giving consent. It affects future consent-based processing, not the lawfulness of processing before withdrawal. Separate legal obligations and retention requirements need their own analysis.",
+        "**Consider what happens after withdrawal.** An optional research communication list uses consent. A participant withdraws consent for future newsletters. The controller must stop consent-based newsletters, but may need to retain limited evidence of the withdrawal or other records under a separate, valid obligation. It cannot simply invent a new basis after withdrawal in order to continue the same marketing. The consent interface should make withdrawal accessible and the privacy information should explain its practical consequences. When research participation and GDPR consent differ, distinguish stopping future study activities from the lawful handling of previously collected records."
       ],
       "example": "A lecturer asks students to participate in research during a compulsory course. Participation is described as optional, but the lecturer also grades the students and no equivalent alternative exists. Compare an independent recruitment process with an equally accessible alternative and no academic consequences.",
       "nuance": "Consent to participate in a research study is an ethical decision and may coexist with a non-consent GDPR basis. Explain the distinction clearly so participants understand what withdrawal means in the actual study.",
@@ -1130,6 +1356,30 @@
               "location": "Art. 7, 9(2)(a)"
             }
           ]
+        },
+        {
+          "id": "g13-7",
+          "statement": "If consent is withdrawn, Article 7 requires stopping future processing that depends on that consent.",
+          "answer": true,
+          "explanation": "The consent basis no longer supports subsequent processing; separately applicable obligations need their own basis.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 7(3)"
+            }
+          ]
+        },
+        {
+          "id": "g13-8",
+          "statement": "A consent form may describe a withdrawal process that is deliberately much harder than giving consent.",
+          "answer": false,
+          "explanation": "Article 7(3) requires withdrawal to be as easy as giving consent.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 7(3)"
+            }
+          ]
         }
       ]
     },
@@ -1143,7 +1393,8 @@
         "**A statutory foundation.** A task in the public interest or exercise of official authority requires a basis in EU or member-state law. The legal foundation need not specify every individual processing operation, but the processing must be necessary for the task. Identify the relevant law and explain the connection.",
         "**Dutch university context.** The WHW describes functions of higher-education institutions and examination responsibilities. For example, Article 1.3 concerns institutional functions and Articles 7.12–7.12b concern examination boards. These are starting points for legal analysis, not a blanket authorization for every proposed data use.",
         "**Separate purpose and necessity.** Teaching, scientific research and public knowledge transfer may form part of a university's statutory mission, but an optional profiling tool or marketing campaign is not automatically necessary for that mission. Consider less intrusive alternatives and applicable sector rules.",
-        "**Rights still matter.** Article 21(1) provides a right to object to public-task processing on grounds relating to the individual's situation. The controller must assess the applicable grounds for continuing. Research has a distinct Article 21(6) rule."
+        "**Rights still matter.** Article 21(1) provides a right to object to public-task processing on grounds relating to the individual's situation. The controller must assess the applicable grounds for continuing. Research has a distinct Article 21(6) rule.",
+        "**Work with the actual statutory provision.** In a university example, start with the WHW function or duty and connect it to the processing purpose, then identify why the particular information is necessary. For an examination decision, results and evidence may be relevant; continuous tracking of unrelated activity is a separate issue. Article 6(3) also requires the legal foundation to meet a public-interest objective and be proportionate. National legislation or institutional policy may further structure responsibilities. If the precise legal basis is uncertain, it should remain an open legal question rather than being asserted as established merely because the activity is familiar."
       ],
       "example": "An examination board needs a student's assessed results to determine eligibility for a degree. Compare that statutory function with continuous collection of behavioral analytics from the same student to optimize advertising for a summer school. The latter cannot borrow the board's legal reasoning merely because both activities occur at the university.",
       "nuance": "The university's status, exact processing purpose and national legal basis need examination. Do not presume that a particular Dutch institution is a public authority for every activity, or that public task covers all research automatically.",
@@ -1233,6 +1484,30 @@
               "location": "Art. 9"
             }
           ]
+        },
+        {
+          "id": "g14-7",
+          "statement": "A legally grounded examination task can justify processing necessary evidence without requiring the law to name every database field.",
+          "answer": true,
+          "explanation": "Recital 45 and Article 6(3) permit a legal foundation covering more than one operation; necessity still matters.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(3); Recital 45"
+            }
+          ]
+        },
+        {
+          "id": "g14-8",
+          "statement": "Article 21 makes every objection to public-task processing automatically decisive.",
+          "answer": false,
+          "explanation": "Article 21(1) allows continued processing on specified compelling grounds or for legal claims, subject to its conditions.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 21(1)"
+            }
+          ]
         }
       ]
     },
@@ -1246,7 +1521,8 @@
         "**Purpose test.** Identify a specific, real and lawful interest of the controller or a third party. An abstract wish for more information is insufficient. Commercial interests are not automatically excluded, but they must still satisfy the other conditions.",
         "**Necessity test.** Ask whether processing is actually needed to achieve that interest and whether an equally effective, less intrusive method exists. If the interest can be met without using personal data, this basis may not support the proposed processing.",
         "**Balancing test.** Consider the nature of the data, reasonable expectations, dependency, potential harm and safeguards. A legitimate interest does not prevail automatically. Record the reasoning and provide required information about the interest; the right to object also matters.",
-        "**Case law.** In C-621/22 (KNLTB), the Court held that a commercial interest can potentially qualify without being expressly prescribed by law. It did not approve all commercial disclosures: necessity and balancing remained essential. The case is particularly relevant in the Netherlands because it involved the AP."
+        "**Case law.** In C-621/22 (KNLTB), the Court held that a commercial interest can potentially qualify without being expressly prescribed by law. It did not approve all commercial disclosures: necessity and balancing remained essential. The case is particularly relevant in the Netherlands because it involved the AP.",
+        "**Balancing is a contextual judgment.** A university association has an interest in organizing an alumni event. It can compare contacting people already expecting occasional association messages with purchasing unrelated contact lists, or publishing participants' details. The first, second and third operations differ in expectations and impact. Safeguards such as a limited audience, short retention or an objection mechanism can influence the balance, but do not rescue unnecessary processing. Distinguish the three tests in writing: identify the interest, demonstrate necessity and then evaluate whether the rights or interests of individuals override it."
       ],
       "example": "A university alumni association considers sharing graduate contact details with a commercial partner. Compare an approach that gives alumni an optional opportunity to contact the partner themselves. Consider reasonable expectations, necessity, the type of data and whether the university or association is acting as a public authority in the relevant task.",
       "nuance": "Article 6(1)(f) does not apply to processing by public authorities in performing their tasks. Direct marketing objections under Article 21(2)–(3) have different consequences from general Article 21(1) objections.",
@@ -1344,6 +1620,30 @@
               "location": "Art. 6(1)"
             }
           ]
+        },
+        {
+          "id": "g15-7",
+          "statement": "Safeguards can be relevant to the legitimate-interest balance without making unnecessary processing necessary.",
+          "answer": true,
+          "explanation": "Necessity and balancing are distinct cumulative requirements under Article 6(1)(f).",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(1)(f)"
+            }
+          ]
+        },
+        {
+          "id": "g15-8",
+          "statement": "A controller relying on legitimate interests never needs to tell the individual what interest it pursues.",
+          "answer": false,
+          "explanation": "Article 13(1)(d) and Article 14(2)(b) require information on the legitimate interests where applicable.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 13(1)(d), 14(2)(b)"
+            }
+          ]
         }
       ]
     },
@@ -1357,7 +1657,8 @@
         "**Two layers.** Establish an Article 6 basis and a relevant exception to the Article 9(1) prohibition. The categories include health, genetic data, certain biometric data, racial or ethnic origin, political opinions, religion, trade union membership and data about sex life or sexual orientation.",
         "**Biometric distinction.** A normal photograph is not automatically special-category biometric data. Article 9 addresses biometric data processed for unique identification. Technical processing and intended purpose matter. A photograph might nevertheless reveal other special categories depending on its use.",
         "**Choose the actual exception.** Article 9(2) includes explicit consent, specified employment or social protection conditions, vital interests, legal claims, substantial public interest, healthcare, public health and research subject to requirements. Research under Article 9(2)(j) needs a legal foundation and safeguards. UAVG Article 24 supplies a Dutch conditional research exception; it is not a blanket exemption.",
-        "**Other sensitive data.** Grades, financial information and disciplinary records can be highly sensitive without necessarily being Article 9 categories. Article 10 separately governs criminal conviction and offence data. Security, minimization and risk assessment apply to all personal data."
+        "**Other sensitive data.** Grades, financial information and disciplinary records can be highly sensitive without necessarily being Article 9 categories. Article 10 separately governs criminal conviction and offence data. Security, minimization and risk assessment apply to all personal data.",
+        "**Inferred data and legal conditions.** A model infers the probability that a student has a particular medical condition from behavioral patterns. The classification depends on what the output reveals and how it is processed, not simply whether the original inputs were ordinary logs. Article 9 conditions vary with purpose: an explicit-consent condition differs from research, healthcare or employment provisions. Where the research condition is relied upon in the Netherlands, read UAVG Article 24 and Article 89 together. Also examine who can access the result and whether the same outcome could be achieved without creating a health inference."
       ],
       "example": "A university stores disability information to provide accommodations. The examination board needs to know which accommodation applies, but may not need the medical diagnosis. Compare that with a health research project analyzing diagnoses, where the information itself is scientifically necessary. The purpose, conditions, access and safeguards differ.",
       "nuance": "Information may reveal health or another protected category indirectly. Do not decide solely from a column name or whether the data were supplied by the individual. Examine the actual meaning and intended inference.",
@@ -1448,6 +1749,30 @@
               "location": "Art. 9(1)"
             }
           ]
+        },
+        {
+          "id": "g16-7",
+          "statement": "A health inference about an identifiable student can raise Article 9 issues even if the underlying inputs were not originally health records.",
+          "answer": true,
+          "explanation": "The nature of the inferred personal data matters, not only the input labels.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 4(15), 9"
+            }
+          ]
+        },
+        {
+          "id": "g16-8",
+          "statement": "The fact that a research participant disclosed a medical diagnosis to a researcher means the participant made it manifestly public.",
+          "answer": false,
+          "explanation": "Disclosure in a research relationship is not equivalent to manifest public disclosure by the individual.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 9(2)(e)"
+            }
+          ]
         }
       ]
     },
@@ -1463,7 +1788,8 @@
         "Article 28 requires sufficient processor guarantees and a binding agreement containing the prescribed terms.",
         "**Map the activity, not the organization.** Identify who decides why personal data are processed and the essential aspects of how. A supplier can choose non-essential technical means while acting as processor. The same supplier may be a separate controller for a different use, such as training its own models for its own purposes.",
         "**Joint control.** Partners can jointly determine processing through common or converging decisions without identical roles or access. Mere participation in a consortium or exchange of information does not automatically establish joint control. Analyze each activity and stage, including recruitment, collection, analysis and later reuse.",
-        "**The legal arrangements differ.** Article 26 calls for a transparent allocation of joint-controller responsibilities, with the essence available to individuals. Article 28 requires a binding processor arrangement with specified terms. Independent-controller disclosures require their own lawfulness and safeguards; a DPA is not the appropriate instrument merely because data are exchanged."
+        "**The legal arrangements differ.** Article 26 calls for a transparent allocation of joint-controller responsibilities, with the essence available to individuals. Article 28 requires a binding processor arrangement with specified terms. Independent-controller disclosures require their own lawfulness and safeguards; a DPA is not the appropriate instrument merely because data are exchanged.",
+        "**Read the operational agreement critically.** Determine whether the parties independently choose their objectives, jointly decide on a common processing activity, or one acts only on another's documented instructions. A university may be controller for its recruitment records and processor in a separate commissioned research service, depending on facts. A consortium agreement can include several different role allocations for different activities. What matters is that its obligations reflect the real relationship, not whether the document is called a DPA, joint-controller agreement or data-sharing agreement."
       ],
       "example": "Two universities jointly choose a cohort, research questions and data collection protocol. A hosting provider stores coded records on their instructions, but also wishes to train its own commercial model. Determine the roles for the study, hosting and proposed model training separately.",
       "nuance": "A contract label does not settle the classification. A provider may have different roles for different processing purposes.",
@@ -1550,6 +1876,30 @@
               "location": "Art. 28(10)"
             }
           ]
+        },
+        {
+          "id": "g03-7",
+          "statement": "Two universities receiving the same research dataset are necessarily joint controllers even if they independently decide their own unrelated research purposes.",
+          "answer": false,
+          "explanation": "Joint control requires joint determination, not merely common access to data.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 4(7), 26"
+            }
+          ]
+        },
+        {
+          "id": "g03-8",
+          "statement": "A controller's processor arrangement must address instructions and assistance with relevant controller obligations.",
+          "answer": true,
+          "explanation": "Article 28(3) specifies documented instructions and assistance duties.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 28(3)"
+            }
+          ]
         }
       ]
     },
@@ -1565,7 +1915,8 @@
         "Article 22 concerns decisions based solely on automated processing that produce legal or similarly significant effects, subject to exceptions and safeguards.",
         "**Timing and scope.** Article 12 generally requires a response within one month, with a possible extension of two further months where necessary, subject to timely notice and reasons. Access concerns personal data and associated information; it is not automatically a right to every original document, but a copy must be intelligible and effective.",
         "**Know the differences.** Rectification corrects inaccurate data. Restriction can apply while accuracy is disputed. Portability is limited to automated processing based on consent or contract and data provided by the person. Objection has distinct rules depending on the basis and purpose; direct marketing receives particular treatment.",
-        "**Judicial interpretation.** In C-154/21 the Court found that access generally includes the actual identity of recipients where requested, subject to limits such as impossibility or manifestly unfounded/excessive requests. C-634/21 (SCHUFA) shows that a score can itself qualify as an automated decision where it plays a determining role in the subsequent decision. A human rubber stamp is not necessarily genuine review."
+        "**Judicial interpretation.** In C-154/21 the Court found that access generally includes the actual identity of recipients where requested, subject to limits such as impossibility or manifestly unfounded/excessive requests. C-634/21 (SCHUFA) shows that a score can itself qualify as an automated decision where it plays a determining role in the subsequent decision. A human rubber stamp is not necessarily genuine review.",
+        "**A rights request is not one generic procedure.** Identify the right and its legal conditions, verify identity proportionately where necessary, locate the relevant personal data and determine whether any specific limitation applies. When the request is complex, Article 12(3) allows an extension with notification within the original month. Where refusing a request, the controller must explain the reasons and provide information about complaint and judicial remedies as applicable. Research restrictions and rights of other individuals need specific analysis rather than a blanket refusal."
       ],
       "example": "A student requests access to an AI-generated risk score, the underlying personal data, and who received them. Compare access with an objection to the use of the score and a challenge to a solely automated decision. Consider whether the score has significant effects and whether a reviewer can independently change the result.",
       "nuance": "A nominal human signature is not necessarily meaningful review. Examine actual decision-making, not only the workflow diagram.",
@@ -1663,6 +2014,30 @@
               "location": "Operative part"
             }
           ]
+        },
+        {
+          "id": "g04-7",
+          "statement": "A controller that extends the response time under Article 12(3) must inform the individual within one month and give reasons.",
+          "answer": true,
+          "explanation": "The extension mechanism includes that explicit notice requirement.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 12(3)"
+            }
+          ]
+        },
+        {
+          "id": "g04-8",
+          "statement": "A complex request permits the controller to refuse it solely because processing it requires extra work.",
+          "answer": false,
+          "explanation": "Complexity may support an extension, not automatic refusal; Article 12 has separate conditions for refusal or fees.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 12(3), (5)"
+            }
+          ]
         }
       ]
     },
@@ -1678,7 +2053,8 @@
         "If high risk remains absent measures to mitigate it, Article 36 requires prior consultation with the supervisory authority.",
         "**Different governance instruments.** A processing record describes categories, purposes, recipients and retention. A DPIA examines risks and measures for likely high-risk processing. A processor contract sets binding obligations where a processor relationship exists. They serve different functions and are not interchangeable.",
         "**DPIA reasoning.** Article 35(7) requires a description of processing and purposes, necessity and proportionality, assessment of risks to people and planned measures. The controller seeks DPO advice where one is designated. Risks include discrimination, loss of autonomy, reputational damage and chilling effects, not only data leaks.",
-        "**From assessment to action.** If the envisaged processing would leave high risk without measures to mitigate it, Article 36 requires prior consultation. Reassess when the risk changes; a vendor feature or new purpose may alter the analysis. The controller owns the decision and the DPO independently advises and monitors."
+        "**From assessment to action.** If the envisaged processing would leave high risk without measures to mitigate it, Article 36 requires prior consultation. Reassess when the risk changes; a vendor feature or new purpose may alter the analysis. The controller owns the decision and the DPO independently advises and monitors.",
+        "**Risk assessment in layers.** A system can be technically secure yet produce harmful outcomes through inaccurate classifications, coercive monitoring or loss of individual control. In a DPIA, describe the nature, scope, context and purpose, assess necessity separately from risk, identify likely harms, then evaluate the measures and residual risk. Consult the DPO and relevant specialists without shifting the controller's decision to them. Article 36 is a distinct step when the applicable high-risk threshold for prior consultation is met."
       ],
       "example": "A department pilots an AI-assisted examination monitoring system. Assess the scale and intrusiveness of monitoring, potential false flags, access to recordings, viable alternatives, and the impact on students. Security alone does not address discriminatory outcomes or disproportionate surveillance.",
       "nuance": "A DPIA is not merely a security review, and its completion does not by itself establish lawfulness.",
@@ -1764,6 +2140,30 @@
               "location": "Art. 35(11)"
             }
           ]
+        },
+        {
+          "id": "g05-7",
+          "statement": "An appropriate security assessment alone can replace the necessity and proportionality analysis in a DPIA.",
+          "answer": false,
+          "explanation": "Article 35(7) requires both necessity/proportionality and assessment of risks and measures.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 35(7)"
+            }
+          ]
+        },
+        {
+          "id": "g05-8",
+          "statement": "The controller must seek the advice of its DPO, where one is designated, when carrying out a DPIA.",
+          "answer": true,
+          "explanation": "Article 35(2) requires the controller to seek that advice.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 35(2)"
+            }
+          ]
         }
       ]
     },
@@ -1779,7 +2179,8 @@
         "Article 2(6) excludes systems/models and outputs specifically developed and put into service solely for scientific research and development. Article 2(8) separately addresses pre-market research, testing and development; real-world testing is not covered by that exclusion.",
         "**Start with the AI system definition.** Article 3(1) describes a machine-based system with varying autonomy that infers outputs from inputs for objectives. Not every conventional deterministic software feature is necessarily an AI system. Assess actual functionality rather than a marketing label.",
         "**Roles can accumulate.** The university may deploy a purchased AI service and separately provide an internally developed system under its own name. Article 25 addresses when actors may assume provider obligations for high-risk systems, such as substantial modification or changing intended purpose in specified circumstances.",
-        "**Research exclusion boundaries.** Article 2(6) concerns AI specifically developed and put into service solely for scientific R&D. Article 2(8) concerns pre-market research, testing and development, but not testing in real-world conditions. Using a commercially available chatbot to help write a research proposal is not the same as developing an AI system solely for scientific research."
+        "**Research exclusion boundaries.** Article 2(6) concerns AI specifically developed and put into service solely for scientific R&D. Article 2(8) concerns pre-market research, testing and development, but not testing in real-world conditions. Using a commercially available chatbot to help write a research proposal is not the same as developing an AI system solely for scientific research.",
+        "**One scenario, two legal maps.** A university contracts for an AI application that analyzes personal data. Under GDPR the university may determine the processing purposes and the supplier may act on instructions; under the AI Act the supplier may be provider and the university deployer. If the university develops its own system and puts it into service under its name, its AI Act role may change. The two sets of definitions must be assessed independently. Even a system outside the AI Act's scientific research scope can involve regulated processing of personal data."
       ],
       "example": "A lab develops a prototype to study language processing, then a faculty starts using it to evaluate student submissions. The original experimental purpose and later operational purpose must be analyzed separately. Check the AI Act roles, intended purpose, risk classification and GDPR processing independently.",
       "nuance": "An AI Act research exclusion does not exempt personal-data processing from GDPR. Reassess when intended purpose changes.",
@@ -1877,6 +2278,30 @@
               "location": "Art. 25"
             }
           ]
+        },
+        {
+          "id": "a01-7",
+          "statement": "An AI system can be outside an AI Act research exclusion but still process only anonymous data outside GDPR.",
+          "answer": true,
+          "explanation": "AI Act scope and GDPR identifiability are independent legal questions.",
+          "references": [
+            {
+              "source": "ai",
+              "location": "Art. 2"
+            }
+          ]
+        },
+        {
+          "id": "a01-8",
+          "statement": "A university that deploys AI for a teaching task is exempt merely because the university also conducts scientific research.",
+          "answer": false,
+          "explanation": "The research exclusion concerns specified systems and purposes, not institutional identity.",
+          "references": [
+            {
+              "source": "ai",
+              "location": "Art. 2(6), (8)"
+            }
+          ]
         }
       ]
     },
@@ -1892,7 +2317,8 @@
         "Article 5 prohibits specified practices, including emotion inference in workplaces and educational institutions based on biometric data, subject to the medical or safety exception.",
         "**Literacy is contextual.** Distinguish the amended legal requirement from the original text. Training should address the particular tools, people and use context rather than treating one general course as suitable for every task. A staff member summarizing public documents faces different risks from a person reviewing AI-generated exam flags.",
         "**Prohibition is not the same as high risk.** Article 5 concerns prohibited practices, including specified manipulation, exploitative practices and social scoring under their statutory conditions. The workplace and education emotion-recognition prohibition has limited medical or safety exceptions. Examine the actual system and statutory definition; not all sentiment analysis is biometric emotion recognition.",
-        "**Transparency obligations.** Article 50 includes requirements concerning certain direct AI interactions and synthetic content. The applicable party, exceptions and specific duty differ. An internal note describing permitted AI use does not necessarily meet all relevant transparency requirements."
+        "**Transparency obligations.** Article 50 includes requirements concerning certain direct AI interactions and synthetic content. The applicable party, exceptions and specific duty differ. An internal note describing permitted AI use does not necessarily meet all relevant transparency requirements.",
+        "**Apply the current legal text.** The original AI Act and its July 2026 amendment must be read together. For a literacy exercise, distinguish obligations applicable to providers and deployers from voluntary institutional training practices. For a prohibited practice, read the exact definition and conditions before classifying it. For transparency, identify whether the duty is assigned to a provider, deployer or another actor. Do not assume that employee education alone satisfies a separate prohibition or transparency obligation."
       ],
       "example": "A university proposes a video system that infers student emotions from facial movements to assess classroom engagement. Compare a voluntary anonymous course feedback questionnaire. The proposed biometric inference is subject to Article 5 analysis, rather than merely being a question of consent or future high-risk compliance.",
       "nuance": "Article 4 does not mandate one standard training course or certificate. High-risk systems can entail additional obligations.",
@@ -1990,6 +2416,30 @@
               "location": "Art. 50"
             }
           ]
+        },
+        {
+          "id": "a02-7",
+          "statement": "AI literacy measures can make a prohibited AI practice permissible without meeting an exception in Article 5.",
+          "answer": false,
+          "explanation": "Literacy and the prohibition are separate requirements.",
+          "references": [
+            {
+              "source": "ai",
+              "location": "Art. 4–5"
+            }
+          ]
+        },
+        {
+          "id": "a02-8",
+          "statement": "An AI system intended to interact directly with people may trigger Article 50 information duties, subject to its conditions and exceptions.",
+          "answer": true,
+          "explanation": "Article 50(1) sets a specific direct-interaction transparency rule.",
+          "references": [
+            {
+              "source": "ai",
+              "location": "Art. 50(1)"
+            }
+          ]
         }
       ]
     },
@@ -2005,7 +2455,8 @@
         "The 2026 Digital Omnibus postpones Annex III high-risk rules to 2 December 2027 and relevant Annex I product rules to 2 August 2028. The general application date was 2 August 2026; prohibitions and literacy started in February 2025. Transitional rules matter.",
         "**Classify by intended purpose.** Article 6 and Annexes I and III govern different classification routes. Annex III includes certain admission, learning-outcome evaluation and exam-monitoring systems. The Article 6(3) exception is conditional, not a blanket exemption for human-reviewed software; profiling of natural persons defeats it.",
         "**Separate responsibilities.** Providers prepare the system and associated conformity and risk controls under applicable rules. Deployers use it according to instructions, assign appropriate oversight and comply with relevant monitoring duties. Some deployers must conduct an Article 27 fundamental rights impact assessment. Check the amended text and scope.",
-        "**Two clocks.** The July 2026 amendment changed high-risk application dates. Earlier obligations, including prohibitions, already apply. Transitional rules for existing systems may differ. GDPR duties are not postponed by the AI Act schedule. Consider classification during procurement, not only on the date a rule becomes applicable."
+        "**Two clocks.** The July 2026 amendment changed high-risk application dates. Earlier obligations, including prohibitions, already apply. Transitional rules for existing systems may differ. GDPR duties are not postponed by the AI Act schedule. Consider classification during procurement, not only on the date a rule becomes applicable.",
+        "**Interpret obligations by role and date.** Before assuming a requirement applies, identify whether the system is covered, which actor has the obligation, whether the relevant provision has become applicable and whether a transitional rule changes the position. For a high-risk admissions system, provider obligations concerning design and documentation differ from deployer obligations concerning operational use and oversight. A university may need to coordinate these with GDPR assessments and procurement documentation without treating the instruments as interchangeable."
       ],
       "example": "A vendor markets a tool that ranks admissions applicants. A second tool only formats text without influencing selection. Compare the intended purposes, possible Article 6(3) conditions, profiling, human oversight and the date on which the relevant high-risk provisions apply.",
       "nuance": "High-risk does not mean prohibited. Classification depends on intended purpose and the applicable legal conditions. Dates should be rechecked before practical reliance.",
@@ -2103,6 +2554,30 @@
               "location": "Art. 2(7)"
             }
           ]
+        },
+        {
+          "id": "a03-7",
+          "statement": "A system that profiles natural persons cannot use the Article 6(3) exception for Annex III systems.",
+          "answer": true,
+          "explanation": "Article 6(3) expressly treats such profiling systems as high-risk.",
+          "references": [
+            {
+              "source": "ai",
+              "location": "Art. 6(3)"
+            }
+          ]
+        },
+        {
+          "id": "a03-8",
+          "statement": "An application date for Annex III systems establishes the same application date for all prohibited practices.",
+          "answer": false,
+          "explanation": "The AI Act has distinct dates for its different provisions.",
+          "references": [
+            {
+              "source": "omnibus",
+              "location": "Art. 1; amendment to Art. 113"
+            }
+          ]
         }
       ]
     },
@@ -2118,7 +2593,8 @@
         "For special categories, an Article 9 condition is also necessary. Dutch UAVG Article 24 provides a conditional research exception.",
         "**Two decisions for participants.** Informed consent to take part protects autonomy in the study. GDPR consent authorizes processing if it is the chosen basis. A participant can discontinue participation even where certain lawfully collected data remain subject to another valid basis or retention requirement; explain the actual limits in advance.",
         "**Special categories in Dutch research.** Article 9(2)(j) and Article 89(1) must be read with applicable national law. UAVG Article 24 sets cumulative conditions, including necessity for research/statistics, public interest, impossibility or disproportionate effort of obtaining explicit consent, and safeguards. Do not assume the exception simply because an ethics committee approved the study.",
-        "**Recruitment and dependency.** A lecturer recruiting their own students or a supervisor recruiting employees must consider voluntariness and possible detriment. Independent recruitment, equivalent alternatives and clear separation of assessment from participation can reduce pressure. Document the legal basis separately from the ethical process."
+        "**Recruitment and dependency.** A lecturer recruiting their own students or a supervisor recruiting employees must consider voluntariness and possible detriment. Independent recruitment, equivalent alternatives and clear separation of assessment from participation can reduce pressure. Document the legal basis separately from the ethical process.",
+        "**Explain the actual choice.** Participant information should distinguish ethical consent, the legal basis for processing, what happens when participation stops, what information may remain and why, and who can receive data. When reliance on consent is proposed, examine whether consent can be free in the recruitment relationship. When reliance on a research exception is proposed, check its actual Dutch legal conditions. An ethics committee can assess participant protection, but its decision does not remove the controller's responsibility for processing."
       ],
       "example": "A cognitive experiment involves students who can choose an alternative course activity. It collects information about diagnosed learning disabilities. The team must separately address participation consent, Article 6, Article 9, Dutch law, access and safeguards. An ethics approval is relevant to research governance but does not establish those legal conditions.",
       "nuance": "Recital 33 recognizes that some scientific research purposes cannot be fully identified initially, but it does not authorize unlimited consent.",
@@ -2220,6 +2696,30 @@
               "location": "Art. 7(3)"
             }
           ]
+        },
+        {
+          "id": "r01-7",
+          "statement": "A researcher can ethically ask a participant to stop or decline a study activity without making GDPR consent the legal basis.",
+          "answer": true,
+          "explanation": "Ethical participation and the GDPR lawful basis are separate decisions.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6, 7"
+            }
+          ]
+        },
+        {
+          "id": "r01-8",
+          "statement": "A research exception based on Article 9(2)(j) eliminates the requirement to minimize access to health records.",
+          "answer": false,
+          "explanation": "Article 89 safeguards and the Article 5 principles remain applicable.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 9(2)(j), 89"
+            }
+          ]
         }
       ]
     },
@@ -2235,7 +2735,8 @@
         "Article 89 requires safeguards, especially minimization. UAVG Article 44 allows certain rights to be limited in specified research/statistical circumstances.",
         "**Compatibility is only one part of reuse.** The research rule in Article 5(1)(b) is linked to Article 89. Check whether the original legal basis can support further processing, whether the recipient has its own lawful basis and whether special-category conditions apply. New disclosure is itself a processing operation.",
         "**Safeguards follow the dataset and purpose.** Consider pseudonymization, separation of keys, restricted access, confidentiality, data-use limitations and publication risk. Where research can be achieved without identifying people, Article 89(1) favors that approach. Open science does not require public release of identifiable records.",
-        "**Rights and retention.** Article 89 permits defined derogations only under conditions and applicable law. UAVG Article 44 concerns specific rights in scientific or statistical contexts; it does not abolish all rights. Distinguish institutional research integrity retention from GDPR rules, and justify identifiable retention separately from retention of anonymous results."
+        "**Rights and retention.** Article 89 permits defined derogations only under conditions and applicable law. UAVG Article 44 concerns specific rights in scientific or statistical contexts; it does not abolish all rights. Distinguish institutional research integrity retention from GDPR rules, and justify identifiable retention separately from retention of anonymous results.",
+        "**Controlled access is a substantive safeguard.** If the research value requires detailed records, evaluate whether controlled access with a data-use agreement, restricted workspace, limited output review and prohibition of re-identification can reduce disclosure risk. These are possible measures, not automatic proof of compliance. The recipient's role, purpose, legal basis, transfer status and security still matter. If research can be conducted without identifying people, Article 89 points toward that approach. A promise of open science should not be read as a promise of unrestricted release of personal data."
       ],
       "example": "An archive contains consent forms, raw audio, coded transcripts and final aggregate statistics. A new research team wants the coded data for secondary analysis. Compare controlled access, anonymous release and unrestricted publication, taking account of the original participant information and the possibility of indirect identification.",
       "nuance": "Open science does not require public release of personal data. Institutional retention rules and funder requirements must be considered separately.",
@@ -2334,6 +2835,30 @@
               "location": "Art. 6, 24"
             }
           ]
+        },
+        {
+          "id": "r02-7",
+          "statement": "The research storage exception can support indefinite operational access to identifiable records merely because a future study is imaginable.",
+          "answer": false,
+          "explanation": "Extended retention must meet the specified research purpose and safeguards, not speculative operational use.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(e), 89"
+            }
+          ]
+        },
+        {
+          "id": "r02-8",
+          "statement": "Article 89(1) favors processing that does not permit identification where the research purpose can be achieved that way.",
+          "answer": true,
+          "explanation": "The provision requires that approach when feasible for the purpose.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 89(1)"
+            }
+          ]
         }
       ]
     },
@@ -2349,7 +2874,8 @@
         "Research-only AI exclusions are purpose-dependent. A research system later deployed in student services must be reassessed.",
         "**When Chapter V applies.** EDPB Guidelines 05/2021 explain the distinction between GDPR territorial scope and transfers. A GDPR-subject exporter making data available to a distinct importer in a third country can trigger Chapter V even where the importer is itself subject to GDPR. Remote access by a separate overseas recipient may count; location alone is not the whole analysis.",
         "**Transfer mechanisms.** Check the scope of any adequacy decision. Otherwise Article 46 mechanisms such as appropriate standard contractual clauses may apply; assess third-country law and supplementary measures where necessary. Article 49 derogations are limited and not a general replacement for regular transfer arrangements.",
-        "**AI research collaboration.** Identify whether partners receive raw training data, coded records, model weights, outputs or anonymous statistics. Models and outputs can present disclosure or inference risks. An agreement should accurately reflect roles, data access, transfer routes, security, retention and any intended secondary use."
+        "**AI research collaboration.** Identify whether partners receive raw training data, coded records, model weights, outputs or anonymous statistics. Models and outputs can present disclosure or inference risks. An agreement should accurately reflect roles, data access, transfer routes, security, retention and any intended secondary use.",
+        "**Follow the data flow, not the country label.** Record who exports, who receives, how they gain access, the processing purpose and applicable transfer route. An EU-based collaborator traveling abroad within the same organization is not necessarily a separate importer; this is distinct from making records available to a separate foreign partner. Both situations can require security assessment. A vendor's statement that its service is European-hosted does not answer all recipient and access questions. Check actual organizational entities, contractual roles and legal safeguards."
       ],
       "example": "A Dutch university and a non-EEA partner jointly study identifiable speech recordings. The partner accesses recordings on an EU-hosted server. Consider the separate recipient and remote access, whether an appropriate transfer mechanism is available, and whether a less revealing data representation could meet the research purpose.",
       "nuance": "Access from abroad may be relevant even without downloading. A collaboration agreement alone is not a Chapter V transfer mechanism.",
@@ -2443,6 +2969,30 @@
               "location": "Art. 49"
             }
           ]
+        },
+        {
+          "id": "r03-7",
+          "statement": "Remote access by a separate foreign research partner can constitute making data available to an importer.",
+          "answer": true,
+          "explanation": "EDPB transfer guidance includes making data accessible to a distinct third-country recipient.",
+          "references": [
+            {
+              "source": "transfer",
+              "location": "Transfer criteria"
+            }
+          ]
+        },
+        {
+          "id": "r03-8",
+          "statement": "A transfer mechanism removes the need to identify an Article 6 lawful basis for disclosure.",
+          "answer": false,
+          "explanation": "Chapter V and the general lawfulness requirements are cumulative.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6, 44"
+            }
+          ]
         }
       ]
     },
@@ -2458,7 +3008,8 @@
         "Erasure requests must be assessed against relevant legal obligations and other exceptions, rather than handled automatically.",
         "**Distinguish educational records.** Enrollment information, formal grade decisions, examination scripts, misconduct allegations, accommodation information and platform logs have different purposes and sensitivity. Define which legal task or duty supports each processing operation, and restrict access accordingly.",
         "**Examination governance.** The WHW assigns responsibilities to examination boards. That does not grant blanket access to all information held about students. The board may need evidence relevant to a decision, while a teacher or administrator needs a different subset. Consider the distinction between formal decisions and working materials.",
-        "**Retention and rights.** Identify statutory requirements, applicable institutional retention rules, appeal procedures and the necessity of retaining particular categories. A student request for erasure or access must be evaluated under GDPR, including relevant exceptions and other individuals' rights."
+        "**Retention and rights.** Identify statutory requirements, applicable institutional retention rules, appeal procedures and the necessity of retaining particular categories. A student request for erasure or access must be evaluated under GDPR, including relevant exceptions and other individuals' rights.",
+        "**Separate academic governance from data protection.** The examination board may need to evaluate whether a decision meets the applicable examination rules. The controller must also determine lawful access, transparency, security, retention and rights for personal data involved. A student's request may combine a challenge to a grade with a request for a copy of personal data. Route each element appropriately rather than rejecting one because the other is already being addressed. Consider third-party information and the specific statutory or institutional retention schedule."
       ],
       "example": "A student challenges a grade and requests access to their exam and related records. The university holds their submitted answers, the examiner's notes, other students' results and an internal decision record. Consider which material contains the student's personal data, whether other people's data need protection, and how the academic appeal differs from GDPR rights.",
       "nuance": "Retention periods for exam scripts may depend on institutional schedules and other rules. Do not infer a single period from GDPR or WHW.",
@@ -2556,6 +3107,30 @@
               "location": "Art. 15"
             }
           ]
+        },
+        {
+          "id": "e01-7",
+          "statement": "An examination board can receive only the student data relevant and necessary for its assigned decision, even if additional data are easily available.",
+          "answer": true,
+          "explanation": "Data minimization applies to access and use in the specific task.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(c), 25"
+            }
+          ]
+        },
+        {
+          "id": "e01-8",
+          "statement": "A grade appeal automatically removes the student's GDPR access rights for the associated personal data.",
+          "answer": false,
+          "explanation": "The appeal and GDPR rights are distinct; applicable limitations need their own assessment.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 12, 15"
+            }
+          ]
         }
       ]
     },
@@ -2571,7 +3146,8 @@
         "AI intended to detect prohibited behavior during tests is listed in Annex III(3)(d); Article 6 classification and the updated implementation calendar matter.",
         "**Monitoring and inference.** Learning analytics may transform ordinary log data into behavioral predictions. Examine whether the inference relates to an individual, how reliable it is, who receives it and whether it affects grades or access to support. False signals and chilling effects are relevant privacy harms.",
         "**Proctoring.** Consider the purpose, necessity, less intrusive exam designs, extent of recording, retention, access and impact on the home environment. A mandatory checkbox is not automatically free consent. High-risk processing may require a DPIA under GDPR independently of the AI Act timetable.",
-        "**Accommodations.** Health information is subject to Article 9. Staff may need to know the adjustment (such as extra time) rather than the diagnosis. Identify the applicable legal condition, including Dutch provisions when relevant, and avoid unnecessary disclosure."
+        "**Accommodations.** Health information is subject to Article 9. Staff may need to know the adjustment (such as extra time) rather than the diagnosis. Identify the applicable legal condition, including Dutch provisions when relevant, and avoid unnecessary disclosure.",
+        "**Evaluate impact beyond privacy notices.** A learning analytics system might create an inaccurate prediction that changes how teachers treat an individual. Consider whether learners can understand and challenge the inference, whether data are accurate for the intended purpose, whether the system uses sensitive proxies and whether a less intrusive support mechanism exists. If accommodation information is needed, restrict who can see it. A DPIA can bring these questions together but cannot substitute for a lawful basis."
       ],
       "example": "A proctoring tool flags frequent eye movement as potential misconduct. Students with certain disabilities may be disproportionately flagged. Compare automated flagging with an examiner's contextual evaluation and alternative exam arrangements. Distinguish technical performance, necessity, fairness and the legal effect of any final decision.",
       "nuance": "Consent may be difficult to establish as freely given when students lack a genuine choice. Assess alternatives rather than assuming consent resolves monitoring risks.",
@@ -2669,6 +3245,30 @@
               "location": "Art. 35"
             }
           ]
+        },
+        {
+          "id": "e02-7",
+          "statement": "A student can be affected by an inaccurate learning analytics inference even when the original activity log is correct.",
+          "answer": true,
+          "explanation": "Derived personal data must be evaluated for accuracy and fairness in relation to their purpose.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(a), (d)"
+            }
+          ]
+        },
+        {
+          "id": "e02-8",
+          "statement": "Completing a DPIA makes a monitoring activity lawful even if no valid Article 6 basis has been identified.",
+          "answer": false,
+          "explanation": "Risk assessment does not establish a lawful basis.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6, 35"
+            }
+          ]
         }
       ]
     },
@@ -2684,7 +3284,8 @@
         "AI Act human oversight and GDPR automated-decision rules are separate requirements. High-risk application deadlines do not postpone GDPR.",
         "**Assess the actual decision.** Identify whether AI produces advice, an intermediate score or a final outcome. Under GDPR Article 22, solely automated decisions with legal or similarly significant effects are subject to special restrictions and exceptions. Genuine human involvement requires actual authority and the ability to evaluate and change the outcome.",
         "**Case law.** SCHUFA (C-634/21) demonstrates that an intermediate automated score can fall within Article 22 if it determines the subsequent decision in practice. The label 'recommendation' is not decisive. In education, assess how the examiner or admissions officer actually uses the result.",
-        "**High-risk classification is different.** Annex III(3) lists specified systems for educational access, learning outcomes, educational level and examination monitoring. Human review may reduce risks without automatically removing the system from Annex III. Check Article 6 and the amended dates."
+        "**High-risk classification is different.** Annex III(3) lists specified systems for educational access, learning outcomes, educational level and examination monitoring. Human review may reduce risks without automatically removing the system from Annex III. Check Article 6 and the amended dates.",
+        "**Human review as a real process.** Evaluate whether the reviewer receives sufficient information, can identify errors, has authority to disregard the recommendation, has adequate time and records independent reasoning. A policy saying that humans remain responsible is not enough if decisions are effectively automatic. Where Article 22 exceptions apply, additional safeguards may be necessary. High-risk AI obligations have their own triggers and dates; a university should design oversight and procurement with both regimes in mind."
       ],
       "example": "A faculty uses an automated model to recommend admission decisions. Officers see scores but lack time or information to challenge them and almost always accept them. Compare a process where a trained officer independently assesses the evidence and can meaningfully change the recommendation. GDPR and AI Act assessments remain separate.",
       "nuance": "Human review can matter for Article 22 but does not automatically remove an AI system from Annex III classification.",
@@ -2786,6 +3387,30 @@
               "location": "Annex III(3), Art. 6"
             }
           ]
+        },
+        {
+          "id": "e03-7",
+          "statement": "An admissions officer's actual authority to reject an AI recommendation is relevant to assessing meaningful human involvement.",
+          "answer": true,
+          "explanation": "The practical role of the human decision-maker matters to whether the decision is solely automated.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 22"
+            }
+          ]
+        },
+        {
+          "id": "e03-8",
+          "statement": "An AI system used to evaluate learning outcomes becomes outside Annex III solely because its output is described as advisory.",
+          "answer": false,
+          "explanation": "Intended purpose and Article 6 conditions determine classification, not the label alone.",
+          "references": [
+            {
+              "source": "ai",
+              "location": "Annex III(3), Art. 6"
+            }
+          ]
         }
       ]
     },
@@ -2801,7 +3426,8 @@
         "Where a supplier uses data for its own purposes, its role for that activity must be assessed separately.",
         "**Procurement starts with processing facts.** Identify data types, purposes, actual roles, hosting, remote support, subcontractors and deletion arrangements. Check whether the vendor uses inputs for its own training or product improvement. A contract label does not override actual activities.",
         "**Article 28 contract contents.** Specify subject matter, duration, nature and purposes, data types, categories of people, instructions and applicable obligations. Check confidentiality, security, assistance with rights and breaches, audits, subprocessor authorization and end-of-service return or deletion. Subprocessor obligations must flow down.",
-        "**Verify changes.** Under general written authorization, the processor informs the controller of intended additions or replacements and allows objections. Determine whether new remote access or onward transfers require additional safeguards. Avoid signing redundant contracts when a valid arrangement already covers the actual processing, but reassess material changes."
+        "**Verify changes.** Under general written authorization, the processor informs the controller of intended additions or replacements and allows objections. Determine whether new remote access or onward transfers require additional safeguards. Avoid signing redundant contracts when a valid arrangement already covers the actual processing, but reassess material changes.",
+        "**Distinguish contract assurance from evidence.** Read the supplier's instructions and rights obligations alongside security architecture, retention settings, subprocessor list, service changes and remote access arrangements. If a vendor is both processor and controller for distinct activities, document those activities separately. Check whether contract clauses actually cover the new AI features or whether an amendment and reassessment are necessary. The objective is an accurate and enforceable arrangement rather than merely obtaining another signed agreement."
       ],
       "example": "A university procures cloud transcription. The vendor stores recordings in Europe, uses an overseas support firm and proposes using recordings to train its own model. Analyze hosting, remote support and model training separately. A processor agreement may cover transcription but cannot simply authorize the vendor's independent purpose as instructed processing.",
       "nuance": "An EU server location is not proof that all processing, support or transfers stay within the EEA.",
@@ -2891,6 +3517,30 @@
               "location": "Art. 28(3)(g)"
             }
           ]
+        },
+        {
+          "id": "o01-7",
+          "statement": "Under specific written authorization, adding a new subprocessor requires the applicable controller authorization.",
+          "answer": true,
+          "explanation": "Article 28(2) requires prior specific or general written authorization; specific authorization is not blanket permission.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 28(2)"
+            }
+          ]
+        },
+        {
+          "id": "o01-8",
+          "statement": "The existence of a processor agreement makes the processor's own unrelated data use part of the controller's instructions.",
+          "answer": false,
+          "explanation": "Independent purposes must be assessed on their own facts; Article 28(10) addresses role changes.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 28(10)"
+            }
+          ]
         }
       ]
     },
@@ -2906,7 +3556,8 @@
         "AI for recruitment, selection or specified worker-management decisions is listed in Annex III(4); workplace emotion inference is generally prohibited subject to the medical/safety exception.",
         "**Employment context.** Separate payroll, workplace safety, absence management, recruitment and monitoring. The legal basis depends on the purpose. Employment dependency may make consent unsuitable where refusal is not genuinely possible. A contract is not permission for unrelated tracking.",
         "**Health data.** Employers need to distinguish necessary absence administration from medical diagnosis and treatment. Applicable Dutch rules restrict processing of health data; involve occupational health professionals where appropriate. UAVG Article 30 contains specific health-data exceptions, not unrestricted permission.",
-        "**AI employment systems.** Annex III(4) covers specified recruitment and worker-management uses, subject to Article 6. Biometric emotion inference at work is generally prohibited subject to the specified medical or safety exceptions. Dutch employment and participation rules can also be relevant; check the applicable process separately."
+        "**AI employment systems.** Annex III(4) covers specified recruitment and worker-management uses, subject to Article 6. Biometric emotion inference at work is generally prohibited subject to the specified medical or safety exceptions. Dutch employment and participation rules can also be relevant; check the applicable process separately.",
+        "**Necessity and fairness in employee monitoring.** Distinguish measuring service delivery at team level from continuous individualized surveillance. Evaluate less intrusive alternatives, the sensitivity of the information, reasonable employee expectations, retention, access and the consequences of errors. A tool used for performance evaluation or promotion may raise both GDPR and AI Act questions. Dutch participation and employment rules can also require separate attention. A measure suitable for payroll administration is not necessarily appropriate for monitoring productivity."
       ],
       "example": "A department proposes monitoring keystrokes to assess employee productivity and using an AI model to rank staff for promotion. Consider whether less intrusive evidence meets the purpose, the legal basis, fairness, transparency, the need for a DPIA and the AI Act classification. Distinguish the monitoring from ordinary payroll administration.",
       "nuance": "High-risk obligations apply according to the updated calendar, while prohibited practices and GDPR already apply.",
@@ -3008,6 +3659,30 @@
               "location": "Annex III(4), Art. 6"
             }
           ]
+        },
+        {
+          "id": "o02-7",
+          "statement": "Team-level statistics that do not identify individual workers may be a less intrusive alternative to personal monitoring.",
+          "answer": true,
+          "explanation": "An effective non-identifying alternative is relevant to necessity and minimization.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(c), 25"
+            }
+          ]
+        },
+        {
+          "id": "o02-8",
+          "statement": "An AI provider's claim of high accuracy alone establishes that a university may lawfully rank staff for promotion.",
+          "answer": false,
+          "explanation": "Lawfulness, necessity, fairness and applicable AI Act requirements must still be examined.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5, 6, 35"
+            }
+          ]
         }
       ]
     },
@@ -3023,7 +3698,8 @@
         "The DPO advises and monitors independently. The controller remains accountable. A high-risk breach may also require communication to affected individuals.",
         "**A breach is not just a cyberattack.** Misdirected emails, accidental deletion and unauthorized alteration can be breaches. Identify what happened, data categories, affected people, recipients, containment and potential consequences. Document facts and decisions even when authority notification is not required.",
         "**Two thresholds.** Notify the supervisory authority unless a risk to individuals is unlikely; communicate to affected people when high risk is likely, subject to Article 34 exceptions. These are different thresholds. The controller should act without undue delay and, where feasible, within 72 hours after awareness for required authority notification; explain any delay.",
-        "**Responsibilities.** A processor informs the controller without undue delay after awareness. A DPO advises and monitors; the controller remains accountable. Internal staff should use the institutional reporting route promptly and not make unilateral legal notification decisions outside their assigned responsibilities."
+        "**Responsibilities.** A processor informs the controller without undue delay after awareness. A DPO advises and monitors; the controller remains accountable. Internal staff should use the institutional reporting route promptly and not make unilateral legal notification decisions outside their assigned responsibilities.",
+        "**Incident decision-making exercise.** First contain the incident, preserve relevant facts and notify the responsible institutional team. Then establish whether personal data were involved, what type of breach occurred, the likely consequences and whether the Article 33 and 34 thresholds are met. Notification can be phased where full information is not available at once, as Article 33(4) allows. Record what was known at each point, the measures taken and the rationale for the decision. Do not wait for perfect certainty before escalation."
       ],
       "example": "A staff member emails a spreadsheet with sensitive student accommodation details to an unintended external recipient. Contain the incident, assess whether the recipient accessed or deleted the file, identify affected people and possible consequences, and document the reasoning for notification and communication. A recipient's assurance is relevant but not automatically decisive.",
       "nuance": "Not every security incident is a personal data breach, and not every breach requires notification. Internal reporting deadlines can be stricter.",
@@ -3107,6 +3783,30 @@
             {
               "source": "gdpr",
               "location": "Art. 33(1)"
+            }
+          ]
+        },
+        {
+          "id": "o03-7",
+          "statement": "A required breach notification may provide information in phases when it cannot all be provided at the same time.",
+          "answer": true,
+          "explanation": "Article 33(4) allows phased provision without undue further delay.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 33(4)"
+            }
+          ]
+        },
+        {
+          "id": "o03-8",
+          "statement": "A controller must communicate every notified breach to all affected individuals regardless of the risk level.",
+          "answer": false,
+          "explanation": "Article 34 uses a high-risk threshold and specified exceptions, distinct from Article 33.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 34"
             }
           ]
         }
