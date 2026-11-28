@@ -1,6 +1,6 @@
 {
-  "version": "1.0",
-  "reviewed": "2026-11-27",
+  "version": "1.1",
+  "reviewed": "2026-11-28",
   "sources": {
     "gdpr": {
       "title": "GDPR — Regulation (EU) 2016/679",
@@ -56,6 +56,41 @@
       "title": "SURF Privacy Expertise Centrum",
       "url": "https://pec.surf.nl/",
       "type": "Sector guidance"
+    },
+    "consent": {
+      "title": "EDPB Guidelines 05/2020 — Consent",
+      "url": "https://www.edpb.europa.eu/documents/guideline/guidelines-052020-on-consent-under-regulation-2016679_en",
+      "type": "Regulatory guidance"
+    },
+    "access": {
+      "title": "EDPB Guidelines 01/2022 — Right of access",
+      "url": "https://www.edpb.europa.eu/documents/guideline/guidelines-012022-on-data-subject-rights-right-of-access_en",
+      "type": "Final regulatory guidance"
+    },
+    "transfer": {
+      "title": "EDPB Guidelines 05/2021 — Article 3 and Chapter V",
+      "url": "https://www.edpb.europa.eu/documents/guideline/guidelines-052021-on-the-interplay-between-the-application-of-article-3-and-the_en",
+      "type": "Regulatory guidance"
+    },
+    "knltb": {
+      "title": "CJEU C-621/22 — KNLTB v Autoriteit Persoonsgegevens",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A62022CJ0621",
+      "type": "Court judgment, 4 October 2024"
+    },
+    "schufa": {
+      "title": "CJEU C-634/21 — SCHUFA (Scoring)",
+      "url": "https://juris.curia.europa.eu/juris/document/document_print.jsf?docid=280426&doclang=EN",
+      "type": "Court judgment, 7 December 2023"
+    },
+    "recipients": {
+      "title": "CJEU C-154/21 — Österreichische Post",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A62021CJ0154",
+      "type": "Court judgment, 12 January 2023"
+    },
+    "researchguidance": {
+      "title": "EDPB Guidelines 1/2026 — Scientific research",
+      "url": "https://www.edpb.europa.eu/documents/guideline/guidelines-12026-on-processing-of-personal-data-for-scientific-research_en",
+      "type": "Version 1; consultation closed, not labeled final on 28 November 2026"
     }
   },
   "modules": [
@@ -152,13 +187,15 @@
     {
       "id": "g02",
       "module": "gdpr",
-      "title": "Principles and lawful bases",
+      "title": "Overview: principles and lawful bases",
       "level": "Foundation",
       "objective": "Identify a purpose and lawful basis before processing.",
       "concepts": [
         "Article 5 sets principles including fairness, transparency, purpose limitation, minimization, accuracy, storage limitation, security and accountability.",
         "Article 6 requires an applicable lawful basis. Public task must have a basis in EU or member-state law; consent is not a universal default.",
-        "Special-category data require an applicable Article 9 condition in addition to Article 6."
+        "Special-category data require an applicable Article 9 condition in addition to Article 6.",
+        "**How to study this topic.** The following eleven lessons separate the individual principles and lawful bases. In practice, start with a defined purpose, identify an applicable basis, check all Article 5 principles, then assess additional conditions (including Article 9, if relevant). These tests are cumulative, not alternatives.",
+        "**Legal hierarchy.** Read the operative articles first, then the associated recitals for context. Regulatory guidance and judgments assist interpretation; a local university rule can establish a process or retention schedule but cannot override binding law."
       ],
       "example": "A university collects only details necessary to administer enrollment under its relevant legal duties.",
       "nuance": "A university cannot assume that every activity is a public task. Identify the actual purpose and legal basis; Article 6(1)(f) is unavailable to public authorities when performing their tasks.",
@@ -171,6 +208,10 @@
         {
           "source": "gdpr",
           "location": "Art. 5, 6, 9; Recitals 39, 43, 45"
+        },
+        {
+          "source": "gdpr",
+          "location": "Art. 5(2), 24; Recital 74"
         }
       ],
       "questions": [
@@ -207,6 +248,1127 @@
             {
               "source": "gdpr",
               "location": "Art. 6, 9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g06",
+      "module": "gdpr",
+      "title": "Lawfulness, fairness and transparency",
+      "level": "Foundation — professional depth",
+      "objective": "Explain why having a legal basis does not by itself make processing fair or transparent.",
+      "concepts": [
+        "**Three distinct tests.** Lawfulness asks whether the processing has a valid basis and satisfies applicable legal conditions. Fairness asks whether the way people are treated is justified, including their reasonable expectations and the consequences for them. Transparency asks whether individuals can understand the processing. Meeting one test does not automatically meet the others.",
+        "**Read the law.** Start with Article 5(1)(a), then Articles 12–14. Article 12 concerns understandable and accessible communication. Article 13 applies to collection from the individual, while Article 14 addresses other sources, subject to its own exceptions and timing.",
+        "**Information is not consent.** A privacy notice explains what happens; it is not itself a lawful basis. If the university relies on a legal obligation, asking a student to accept a notice does not change the legal basis. If it relies on consent, the separate Article 7 requirements must be met.",
+        "**Fairness in practice.** A system may technically comply with a stated purpose but still disadvantage a group through inaccurate inputs or unexpected use. Examine the actual consequences, available alternatives and whether the person could reasonably anticipate the processing."
+      ],
+      "example": "A course platform collects activity logs for technical support. The university wants to use them to identify supposedly disengaged students and send alerts to teachers. A general privacy notice about platform administration does not by itself resolve the new purpose, lawful basis, proportionality or risk of incorrect inferences. Compare a voluntary support service with a system that affects assessment.",
+      "nuance": "Transparency does not require publishing other people's personal data or confidential technical details indiscriminately. Article 14 exceptions must be assessed rather than assumed; a difficult notification process alone does not create an exemption.",
+      "terms": {
+        "rechtmatigheid": "lawfulness",
+        "behoorlijkheid": "fairness",
+        "transparantie": "transparency"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 5(1)(a), 6, 12–14; Recitals 39, 58, 60"
+        }
+      ],
+      "questions": [
+        {
+          "id": "g06-1",
+          "statement": "A clear privacy notice establishes a lawful basis by itself.",
+          "answer": false,
+          "explanation": "A notice fulfills information duties; the legal basis is a separate Article 6 question.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(a), 6, 13"
+            }
+          ]
+        },
+        {
+          "id": "g06-2",
+          "statement": "A university relying on legal obligation still has transparency duties.",
+          "answer": true,
+          "explanation": "Article 13 generally applies even where consent is not the basis.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(1)(c), 13"
+            }
+          ]
+        },
+        {
+          "id": "g06-3",
+          "statement": "A technically accurate student profile may still be unfair in its intended use.",
+          "answer": true,
+          "explanation": "Accuracy is distinct from fairness; consequences and context matter.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(a), (d)"
+            }
+          ]
+        },
+        {
+          "id": "g06-4",
+          "statement": "Article 14 is relevant when data are obtained from another institution rather than the student.",
+          "answer": true,
+          "explanation": "Indirect collection brings Article 14 into consideration, including its exceptions.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 14"
+            }
+          ]
+        },
+        {
+          "id": "g06-5",
+          "statement": "Making a processing activity clear to students removes the need to examine necessity.",
+          "answer": false,
+          "explanation": "Transparency does not displace minimization or the requirements of the chosen basis.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(c), 6"
+            }
+          ]
+        },
+        {
+          "id": "g06-6",
+          "statement": "A student must consent to a privacy notice for processing based on a statutory obligation to be lawful.",
+          "answer": false,
+          "explanation": "Consent is not required as an additional legal basis when Article 6(1)(c) validly applies.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(1)(c), 13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g07",
+      "module": "gdpr",
+      "title": "Purpose limitation and further processing",
+      "level": "Foundation — professional depth",
+      "objective": "Distinguish a purpose from a method, and evaluate whether a new use is compatible.",
+      "concepts": [
+        "**Start with the objective.** A purpose is the reason for processing, not the software, the data format or the department involved. A vague label such as improving education is not enough to explain why particular data are needed. Write a purpose at a level that permits a meaningful necessity assessment.",
+        "**A new use is a separate question.** Article 6(4) identifies compatibility factors when further processing is not based on consent or qualifying EU or national law: the relationship between purposes, the collection context, the nature of the data, consequences and safeguards. Recital 50 explains the rationale. Compatible processing does not automatically need a separate basis from the original one, but the original basis must actually support the continued processing.",
+        "**Research is special, not unrestricted.** Article 5(1)(b) treats further processing for scientific research as compatible subject to Article 89(1). The research purpose must be genuine and safeguards appropriate. The research rule does not erase Article 9 conditions, transparency duties or legal restrictions.",
+        "**Document a change.** Identify the proposed new objective, what data it needs, who gets access, what individuals were told and what consequences are possible. Where required, inform individuals before processing for a new purpose."
+      ],
+      "example": "A university collected exam marks to determine whether students passed. A team wants to study whether teaching methods affect outcomes. Compare research using coded marks with an operational dashboard that predicts which individual students should be excluded from a course. The two proposed uses have different purposes, consequences and safeguards.",
+      "nuance": "Article 6(4) is not itself a seventh lawful basis. Where the proposed use is outside what the original consent covers, do not treat a compatibility analysis as a way to bypass consent restrictions.",
+      "terms": {
+        "doelbinding": "purpose limitation",
+        "verdere verwerking": "further processing"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 5(1)(b), 6(4), 13(3), 14(4), 89(1); Recital 50"
+        }
+      ],
+      "questions": [
+        {
+          "id": "g07-1",
+          "statement": "The name of a software platform is sufficient to specify the purpose of processing.",
+          "answer": false,
+          "explanation": "A purpose describes why processing occurs, not merely the tool used.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(b)"
+            }
+          ]
+        },
+        {
+          "id": "g07-2",
+          "statement": "The nature of the data is relevant to the Article 6(4) compatibility analysis.",
+          "answer": true,
+          "explanation": "The factors expressly include sensitive and criminal-offence data.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(4)(c)"
+            }
+          ]
+        },
+        {
+          "id": "g07-3",
+          "statement": "The research compatibility rule depends on Article 89 safeguards.",
+          "answer": true,
+          "explanation": "The research provision explicitly refers to Article 89(1).",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(b), 89(1)"
+            }
+          ]
+        },
+        {
+          "id": "g07-4",
+          "statement": "Article 6(4) is an independent lawful basis equivalent to consent.",
+          "answer": false,
+          "explanation": "The six bases are in Article 6(1); paragraph 4 addresses further-use compatibility.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(1), (4)"
+            }
+          ]
+        },
+        {
+          "id": "g07-5",
+          "statement": "A compatible new purpose can still trigger a duty to give information about the new use.",
+          "answer": true,
+          "explanation": "Articles 13(3) and 14(4) require further-purpose information in applicable cases.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 13(3), 14(4)"
+            }
+          ]
+        },
+        {
+          "id": "g07-6",
+          "statement": "Access controls alone resolve all questions about whether a new purpose is compatible.",
+          "answer": false,
+          "explanation": "Safeguards are only one of several relevant factors.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(4)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g08",
+      "module": "gdpr",
+      "title": "Data minimization and proportionality",
+      "level": "Foundation — professional depth",
+      "objective": "Evaluate the necessity of data fields, granularity, access and collection methods.",
+      "concepts": [
+        "**Minimize relative to purpose.** Article 5(1)(c) requires an appropriate relationship between the data collected and the specified purpose. The smallest possible dataset is not always sufficient; the correct question is whether each element is justified. Inadequate data can also lead to unreliable decisions.",
+        "**Consider alternatives.** Compare full dates of birth with age bands, recorded interviews with notes, continuous monitoring with targeted checks and raw records with statistics. Ask whether a less intrusive approach would achieve the same objective effectively. Cost or convenience alone is not a blanket justification.",
+        "**Minimization extends beyond fields.** Article 25(2) addresses the amount collected, extent of processing, storage and accessibility. Restrict access by role and purpose. A legitimate need for one staff member does not justify access by an entire faculty.",
+        "**Research design matters.** Scientific validity may require granular variables or longitudinal linkage. Justify such choices based on the research question and methodology, then limit unnecessary identifiers, separate linkage keys and consider later aggregation."
+      ],
+      "example": "A study needs to compare performance across age groups. The team requests exact dates of birth, addresses and full student names. If only age bands and a study identifier are needed, those alternatives should be considered. A second study may genuinely need exact age at each measurement; that different purpose could justify greater precision.",
+      "nuance": "Minimization does not mean deliberately collecting inadequate information or destroying records that must be retained. It requires a defensible link between the specific purpose and the amount, precision and accessibility of data.",
+      "terms": {
+        "dataminimalisatie": "data minimization",
+        "noodzakelijkheid": "necessity",
+        "evenredigheid": "proportionality"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 5(1)(c), 25, 35(7); Recitals 39, 78"
+        }
+      ],
+      "questions": [
+        {
+          "id": "g08-1",
+          "statement": "Access limited to staff who need identifiable records is relevant to data protection by default.",
+          "answer": true,
+          "explanation": "Article 25(2) expressly covers accessibility.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 25(2)"
+            }
+          ]
+        },
+        {
+          "id": "g08-2",
+          "statement": "Collecting a field because it may be useful for an unspecified future project satisfies minimization.",
+          "answer": false,
+          "explanation": "The need must relate to a defined purpose, not speculative future use.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(b)–(c)"
+            }
+          ]
+        },
+        {
+          "id": "g08-3",
+          "statement": "A study can justify exact age rather than age bands if scientific validity requires it.",
+          "answer": true,
+          "explanation": "Necessity depends on the specified objective and alternatives.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(c)"
+            }
+          ]
+        },
+        {
+          "id": "g08-4",
+          "statement": "Encrypting a dataset automatically makes every variable in it necessary.",
+          "answer": false,
+          "explanation": "Security and minimization address different requirements.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(c), (f)"
+            }
+          ]
+        },
+        {
+          "id": "g08-5",
+          "statement": "A DPIA includes an assessment of necessity and proportionality.",
+          "answer": true,
+          "explanation": "This is an express part of the DPIA content.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 35(7)(b)"
+            }
+          ]
+        },
+        {
+          "id": "g08-6",
+          "statement": "A controller can disregard minimization when processing under a legal obligation.",
+          "answer": false,
+          "explanation": "The principles continue to apply regardless of the Article 6 basis.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5, 6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g09",
+      "module": "gdpr",
+      "title": "Accuracy and storage limitation",
+      "level": "Foundation — professional depth",
+      "objective": "Distinguish accurate historical evidence from inaccurate current data and justify retention schedules.",
+      "concepts": [
+        "**Accuracy depends on purpose.** Correct an inaccurate current address used to send official correspondence. A historical address in a record of what was reported at an earlier time may be accurate as a historical fact. Record corrections and context rather than silently rewriting evidence.",
+        "**Reasonable steps.** The controller must take reasonable measures to correct or erase inaccurate data relevant to the purpose. Consider who entered a value, how it is checked, how the person can challenge it and whether downstream recipients need to be informed.",
+        "**Retention is purpose-specific.** Identify when the purpose ends, relevant statutory or contractual constraints, review dates and disposal methods. Different parts of a student file or research project may need different retention periods. GDPR does not create a general ten-year rule.",
+        "**Longer research storage.** Article 5(1)(e) allows extended retention when processing is solely for specified archiving, research or statistical purposes, subject to Article 89 safeguards. This is not a general permission to retain all operational data indefinitely."
+      ],
+      "example": "An exam board retains the formal result and decision record while an assessment platform also stores webcam recordings and working notes. Compare the necessity and legal retention basis of each category. A decision record may need to be preserved while intrusive monitoring data may not.",
+      "nuance": "Rectification does not necessarily mean deleting a disputed professional opinion; distinguish accurate recording of an opinion from inaccurate underlying facts, and consider adding a supplementary statement under Article 16.",
+      "terms": {
+        "juistheid": "accuracy",
+        "opslagbeperking": "storage limitation",
+        "bewaartermijn": "retention period"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 5(1)(d)–(e), 16–18, 89; Recitals 39, 65"
+        }
+      ],
+      "questions": [
+        {
+          "id": "g09-1",
+          "statement": "A historical record can remain accurate even when the person's current circumstances have changed.",
+          "answer": true,
+          "explanation": "Accuracy is judged in relation to the purpose of the record.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(d)"
+            }
+          ]
+        },
+        {
+          "id": "g09-2",
+          "statement": "GDPR gives all university records a uniform retention period.",
+          "answer": false,
+          "explanation": "Retention must be justified by purpose and applicable rules.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(e)"
+            }
+          ]
+        },
+        {
+          "id": "g09-3",
+          "statement": "Extended research storage is subject to Article 89 safeguards.",
+          "answer": true,
+          "explanation": "The storage principle expressly conditions longer research retention on safeguards.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(e), 89"
+            }
+          ]
+        },
+        {
+          "id": "g09-4",
+          "statement": "The right to rectification requires overwriting every disputed historical record.",
+          "answer": false,
+          "explanation": "The distinction between inaccurate facts and a faithful historical record matters; supplementary statements can be relevant.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 16"
+            }
+          ]
+        },
+        {
+          "id": "g09-5",
+          "statement": "A retention requirement for final grades automatically applies to every recording used in producing the grades.",
+          "answer": false,
+          "explanation": "Each data category needs its own retention justification.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(e)"
+            }
+          ]
+        },
+        {
+          "id": "g09-6",
+          "statement": "Accuracy obligations apply to inferred information used to make decisions.",
+          "answer": true,
+          "explanation": "Personal data used in decision-making must be accurate in relation to their purpose.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(d)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g10",
+      "module": "gdpr",
+      "title": "Integrity, confidentiality and risk-based security",
+      "level": "Foundation — professional depth",
+      "objective": "Understand the relationship between the security principle and Article 32 measures.",
+      "concepts": [
+        "**Three security dimensions.** Confidentiality concerns unauthorized disclosure or access; integrity concerns unauthorized or accidental alteration; availability concerns loss of access. Security is broader than preventing hackers from reading data.",
+        "**Risk-based measures.** Article 32 requires measures suited to the risks, considering technical possibilities, implementation costs, processing context and risks to individuals. Encryption, access restrictions, resilient backups and periodic testing are examples, not an identical mandatory checklist for every activity.",
+        "**Institutional context.** A research dataset containing health observations may require more stringent access management than a public event registration list. Evaluate both the likelihood and severity of harm, including re-identification and inappropriate sharing.",
+        "**Verify controls.** A policy or supplier promise is not proof that a safeguard works. Consider permission reviews, restoration tests, incident reporting, secure deletion and whether staff know how to use the system safely."
+      ],
+      "example": "A thesis dataset is accidentally deleted. A backup exists but cannot be restored, and the original files are unavailable. This is an availability problem and may constitute a personal data breach even if no unauthorized person received a copy. Assess separately whether authority notification and individual communication are required.",
+      "nuance": "Encryption is valuable but not synonymous with anonymity. Lost encrypted devices may present lower confidentiality risk, but other dimensions and the actual accessibility of the data must still be examined.",
+      "terms": {
+        "integriteit": "integrity",
+        "vertrouwelijkheid": "confidentiality",
+        "beschikbaarheid": "availability"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 5(1)(f), 25, 32–34; Recitals 49, 83, 85"
+        }
+      ],
+      "questions": [
+        {
+          "id": "g10-1",
+          "statement": "Loss of access to personal data can qualify as a personal data breach.",
+          "answer": true,
+          "explanation": "The breach definition includes accidental or unlawful loss or destruction.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 4(12), 32"
+            }
+          ]
+        },
+        {
+          "id": "g10-2",
+          "statement": "Article 32 requires the same security controls for every processing activity.",
+          "answer": false,
+          "explanation": "Appropriate controls depend on context and risk.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 32(1)"
+            }
+          ]
+        },
+        {
+          "id": "g10-3",
+          "statement": "Testing whether backups can actually be restored is relevant to Article 32.",
+          "answer": true,
+          "explanation": "Resilience, restoration and testing are expressly relevant.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 32(1)(c)–(d)"
+            }
+          ]
+        },
+        {
+          "id": "g10-4",
+          "statement": "An encrypted data file is necessarily anonymous.",
+          "answer": false,
+          "explanation": "Encryption does not automatically prevent reasonable identification.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 4(1), Recital 26"
+            }
+          ]
+        },
+        {
+          "id": "g10-5",
+          "statement": "Security measures can include organizational procedures as well as technical controls.",
+          "answer": true,
+          "explanation": "Article 32 refers to both technical and organizational measures.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 32"
+            }
+          ]
+        },
+        {
+          "id": "g10-6",
+          "statement": "A supplier's security certificate removes the need for the university to assess its processing risks.",
+          "answer": false,
+          "explanation": "The controller retains risk-based responsibilities.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 24, 28, 32"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g11",
+      "module": "gdpr",
+      "title": "Accountability and demonstrability",
+      "level": "Foundation — professional depth",
+      "objective": "Explain how a controller demonstrates compliance without confusing paperwork with actual safeguards.",
+      "concepts": [
+        "**Accountability has two components.** The controller must comply with the Article 5 principles and be able to demonstrate that compliance. A signed form is not enough if actual access, retention or data use contradicts it.",
+        "**Evidence follows the risk.** A routine administrative process may be documented through a processing record, lawful-basis reasoning and established controls. Higher-risk monitoring may need a DPIA, a decision on alternatives, stronger controls and periodic review. Avoid paperwork that duplicates an existing valid assessment.",
+        "**Roles differ.** The controller is responsible for compliance. The DPO provides independent advice and monitoring; the processor implements its own applicable obligations and follows instructions. A university can allocate operational tasks internally without transferring its legal accountability to a coordinator.",
+        "**Accountability is ongoing.** New purposes, new recipients, changed software, access from another country or substantially changed risks can require reassessment. Keep decisions and safeguards current rather than treating approval as permanent."
+      ],
+      "example": "A university introduced a course platform several years ago. A vendor adds an AI feature that uses student interactions for analytics. An old DPA and an old risk assessment may still be useful, but they must be compared with the new functionality. The process owner should identify changes and involve the appropriate specialists.",
+      "nuance": "An Article 30 record describes processing; a DPIA assesses high risks. Neither document replaces the other when both are required. The DPO must be involved appropriately and independently, not made responsible for approving their own monitored decisions.",
+      "terms": {
+        "verantwoordingsplicht": "accountability",
+        "verwerkingsregister": "record of processing activities"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 5(2), 24–25, 30, 35, 37–39; Recital 74"
+        }
+      ],
+      "questions": [
+        {
+          "id": "g11-1",
+          "statement": "The controller must be able to demonstrate compliance with Article 5 principles.",
+          "answer": true,
+          "explanation": "This is the accountability requirement in Article 5(2).",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(2)"
+            }
+          ]
+        },
+        {
+          "id": "g11-2",
+          "statement": "A completed processing register proves that every recorded processing operation is lawful.",
+          "answer": false,
+          "explanation": "A register documents processing but does not establish substantive compliance by itself.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(2), 30"
+            }
+          ]
+        },
+        {
+          "id": "g11-3",
+          "statement": "A significant change in processing risks can require review of a prior DPIA.",
+          "answer": true,
+          "explanation": "Article 35(11) calls for review when risk changes, where necessary.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 35(11)"
+            }
+          ]
+        },
+        {
+          "id": "g11-4",
+          "statement": "Assigning privacy tasks to an employee transfers the university's controller accountability to that employee.",
+          "answer": false,
+          "explanation": "Internal allocation does not change controller responsibility.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 24"
+            }
+          ]
+        },
+        {
+          "id": "g11-5",
+          "statement": "An independent DPO advises and monitors rather than taking over controller accountability.",
+          "answer": true,
+          "explanation": "Articles 38 and 39 describe independence and tasks.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 38–39"
+            }
+          ]
+        },
+        {
+          "id": "g11-6",
+          "statement": "Every accountability requirement can be satisfied by signing a DPA.",
+          "answer": false,
+          "explanation": "A processor agreement covers only part of the controller's wider obligations.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 24, 28"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g12",
+      "module": "gdpr",
+      "title": "The six lawful bases",
+      "level": "Foundation — professional depth",
+      "objective": "Compare all Article 6 bases and distinguish necessity from convenience.",
+      "concepts": [
+        "**Consent (a).** A genuine choice for a specified purpose; Article 7 sets additional conditions. It may be suitable for an optional activity, not necessarily for unavoidable student or employee administration.",
+        "**Contract (b).** Processing necessary to perform a contract with the individual, or take requested pre-contract steps. Merely including a processing activity in contract terms does not make it necessary.",
+        "**Legal obligation (c) and public task (e).** Both need a basis in EU or member-state law under Article 6(3). A specific legal duty is different from processing necessary for a legally grounded public-interest task. Identify the actual relevant duty or task.",
+        "**Vital interests (d).** Protects vital interests of an individual, typically urgent or serious situations. It is not a general basis for institutional safety administration. Recital 46 explains that another basis may be preferable when available.",
+        "**Legitimate interests (f).** Requires a legitimate interest, necessity and balancing against individual interests and rights. Public authorities cannot rely on it when performing their tasks. Article 9 conditions are additional where special categories are processed."
+      ],
+      "example": "Compare a student grade record required by law, an optional alumni newsletter, a requested service contract and disclosure of essential information during a medical emergency. The four activities have different purposes and possible legal bases. Determine the actual conditions rather than assigning one basis to the entire university.",
+      "nuance": "A controller must determine and communicate the appropriate basis before processing. Do not select multiple speculative bases merely as fallbacks. Different processing operations can legitimately have different bases.",
+      "terms": {
+        "grondslag": "lawful basis",
+        "wettelijke verplichting": "legal obligation",
+        "vitale belangen": "vital interests"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 6(1)–(3), 7, 9; Recitals 40–47"
+        }
+      ],
+      "questions": [
+        {
+          "id": "g12-1",
+          "statement": "Processing necessary for a contract with the individual may qualify under Article 6(1)(b).",
+          "answer": true,
+          "explanation": "The contractual basis covers necessary performance or requested pre-contract steps.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(1)(b)"
+            }
+          ]
+        },
+        {
+          "id": "g12-2",
+          "statement": "A vendor contract between two institutions makes student monitoring necessary under Article 6(1)(b).",
+          "answer": false,
+          "explanation": "That basis concerns a contract with the data subject or requested steps, and necessity still matters.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(1)(b)"
+            }
+          ]
+        },
+        {
+          "id": "g12-3",
+          "statement": "Vital interests is a distinct lawful basis from public task.",
+          "answer": true,
+          "explanation": "They are separately listed in Article 6(1)(d) and (e).",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(1)(d)–(e)"
+            }
+          ]
+        },
+        {
+          "id": "g12-4",
+          "statement": "A general institutional policy creates a statutory legal obligation under Article 6(1)(c).",
+          "answer": false,
+          "explanation": "The basis must be grounded in applicable EU or member-state law.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(3)"
+            }
+          ]
+        },
+        {
+          "id": "g12-5",
+          "statement": "Article 9 may require an additional condition even if Article 6 is satisfied.",
+          "answer": true,
+          "explanation": "Special-category processing is subject to a separate prohibition and exceptions.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 9"
+            }
+          ]
+        },
+        {
+          "id": "g12-6",
+          "statement": "A public authority performing its public task can rely on Article 6(1)(f) whenever the task is convenient.",
+          "answer": false,
+          "explanation": "The final sentence of Article 6(1) excludes that use by public authorities.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(1)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g13",
+      "module": "gdpr",
+      "title": "Consent and power imbalance",
+      "level": "Foundation — professional depth",
+      "objective": "Recognize valid consent, granular choice, withdrawal and the difference from participation consent.",
+      "concepts": [
+        "**Four characteristics.** Consent must be freely given, specific, informed and unambiguous. Silence, inactivity or a preselected option does not establish affirmative consent. Explicit consent under Article 9(2)(a) requires a heightened expression.",
+        "**Freedom and dependency.** Students may fear academic consequences and employees may fear disadvantage. Recital 43 highlights power imbalances. A university must assess whether refusal or withdrawal can occur without detriment; consent is not categorically impossible in every university relationship.",
+        "**Separate purposes.** A student may agree to appear in an optional promotional video but decline later marketing use. Choices should reflect distinct purposes when appropriate; bundling unrelated purposes can undermine freedom and specificity.",
+        "**Withdrawal.** Withdrawal must be as easy as giving consent. It affects future consent-based processing, not the lawfulness of processing before withdrawal. Separate legal obligations and retention requirements need their own analysis."
+      ],
+      "example": "A lecturer asks students to participate in research during a compulsory course. Participation is described as optional, but the lecturer also grades the students and no equivalent alternative exists. Compare an independent recruitment process with an equally accessible alternative and no academic consequences.",
+      "nuance": "Consent to participate in a research study is an ethical decision and may coexist with a non-consent GDPR basis. Explain the distinction clearly so participants understand what withdrawal means in the actual study.",
+      "terms": {
+        "toestemming": "consent",
+        "intrekken": "withdraw",
+        "vrijelijk gegeven": "freely given"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 4(11), 7, 9(2)(a); Recitals 32, 42–43"
+        },
+        {
+          "source": "consent",
+          "location": "Freedom, specificity, information, withdrawal"
+        }
+      ],
+      "questions": [
+        {
+          "id": "g13-1",
+          "statement": "A preselected checkbox is sufficient affirmative GDPR consent.",
+          "answer": false,
+          "explanation": "Consent requires a clear affirmative act; preselected boxes do not meet that standard.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 4(11); Recital 32"
+            }
+          ]
+        },
+        {
+          "id": "g13-2",
+          "statement": "Withdrawal of valid consent does not retrospectively invalidate earlier lawful consent-based processing.",
+          "answer": true,
+          "explanation": "Article 7(3) expressly provides this.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 7(3)"
+            }
+          ]
+        },
+        {
+          "id": "g13-3",
+          "statement": "The university must be able to demonstrate consent when relying on it.",
+          "answer": true,
+          "explanation": "Article 7(1) places that responsibility on the controller.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 7(1)"
+            }
+          ]
+        },
+        {
+          "id": "g13-4",
+          "statement": "A student signature proves freedom of choice regardless of the grading relationship.",
+          "answer": false,
+          "explanation": "The actual conditions and possible detriment determine whether consent is free.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 7; Recital 43"
+            }
+          ]
+        },
+        {
+          "id": "g13-5",
+          "statement": "Consent to one optional promotional use need not cover unrelated marketing purposes.",
+          "answer": true,
+          "explanation": "Specificity requires appropriate distinction between purposes.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 4(11), 7"
+            }
+          ]
+        },
+        {
+          "id": "g13-6",
+          "statement": "A signed ethical participation form automatically establishes Article 9 explicit consent for every use.",
+          "answer": false,
+          "explanation": "Ethical permission and explicit GDPR consent have different requirements and scope.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 7, 9(2)(a)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g14",
+      "module": "gdpr",
+      "title": "Public task in Dutch universities",
+      "level": "Foundation — professional depth",
+      "objective": "Analyze Article 6(1)(e) and its legal foundation in the Dutch higher-education context.",
+      "concepts": [
+        "**A statutory foundation.** A task in the public interest or exercise of official authority requires a basis in EU or member-state law. The legal foundation need not specify every individual processing operation, but the processing must be necessary for the task. Identify the relevant law and explain the connection.",
+        "**Dutch university context.** The WHW describes functions of higher-education institutions and examination responsibilities. For example, Article 1.3 concerns institutional functions and Articles 7.12–7.12b concern examination boards. These are starting points for legal analysis, not a blanket authorization for every proposed data use.",
+        "**Separate purpose and necessity.** Teaching, scientific research and public knowledge transfer may form part of a university's statutory mission, but an optional profiling tool or marketing campaign is not automatically necessary for that mission. Consider less intrusive alternatives and applicable sector rules.",
+        "**Rights still matter.** Article 21(1) provides a right to object to public-task processing on grounds relating to the individual's situation. The controller must assess the applicable grounds for continuing. Research has a distinct Article 21(6) rule."
+      ],
+      "example": "An examination board needs a student's assessed results to determine eligibility for a degree. Compare that statutory function with continuous collection of behavioral analytics from the same student to optimize advertising for a summer school. The latter cannot borrow the board's legal reasoning merely because both activities occur at the university.",
+      "nuance": "The university's status, exact processing purpose and national legal basis need examination. Do not presume that a particular Dutch institution is a public authority for every activity, or that public task covers all research automatically.",
+      "terms": {
+        "taak van algemeen belang": "task in the public interest",
+        "openbaar gezag": "official authority"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 6(1)(e), 6(3), 21; Recitals 45, 50"
+        },
+        {
+          "source": "whw",
+          "location": "Art. 1.3, 7.12–7.12b; consult current text"
+        }
+      ],
+      "questions": [
+        {
+          "id": "g14-1",
+          "statement": "Article 6(1)(e) requires a legal foundation under Article 6(3).",
+          "answer": true,
+          "explanation": "The public-task basis must be grounded in EU or member-state law.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(3)"
+            }
+          ]
+        },
+        {
+          "id": "g14-2",
+          "statement": "A reference to a university's mission is sufficient without assessing the necessity of the actual processing.",
+          "answer": false,
+          "explanation": "The processing must be necessary for the legally grounded task.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(1)(e)"
+            }
+          ]
+        },
+        {
+          "id": "g14-3",
+          "statement": "Article 21(1) can apply to processing under public task.",
+          "answer": true,
+          "explanation": "It specifically includes Article 6(1)(e).",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 21(1)"
+            }
+          ]
+        },
+        {
+          "id": "g14-4",
+          "statement": "A statutory examination function automatically authorizes unrelated marketing use of student records.",
+          "answer": false,
+          "explanation": "The new purpose must be evaluated separately.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 5(1)(b), 6"
+            }
+          ]
+        },
+        {
+          "id": "g14-5",
+          "statement": "The legal foundation for public task need not describe every individual technical operation.",
+          "answer": true,
+          "explanation": "Recital 45 recognizes that one law may suffice for several processing operations.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Recital 45"
+            }
+          ]
+        },
+        {
+          "id": "g14-6",
+          "statement": "Public-task processing is categorically exempt from Article 9.",
+          "answer": false,
+          "explanation": "Special-category conditions remain applicable.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g15",
+      "module": "gdpr",
+      "title": "Legitimate interests and balancing",
+      "level": "Foundation — professional depth",
+      "objective": "Apply the three-part legitimate-interest test and understand the KNLTB judgment.",
+      "concepts": [
+        "**Purpose test.** Identify a specific, real and lawful interest of the controller or a third party. An abstract wish for more information is insufficient. Commercial interests are not automatically excluded, but they must still satisfy the other conditions.",
+        "**Necessity test.** Ask whether processing is actually needed to achieve that interest and whether an equally effective, less intrusive method exists. If the interest can be met without using personal data, this basis may not support the proposed processing.",
+        "**Balancing test.** Consider the nature of the data, reasonable expectations, dependency, potential harm and safeguards. A legitimate interest does not prevail automatically. Record the reasoning and provide required information about the interest; the right to object also matters.",
+        "**Case law.** In C-621/22 (KNLTB), the Court held that a commercial interest can potentially qualify without being expressly prescribed by law. It did not approve all commercial disclosures: necessity and balancing remained essential. The case is particularly relevant in the Netherlands because it involved the AP."
+      ],
+      "example": "A university alumni association considers sharing graduate contact details with a commercial partner. Compare an approach that gives alumni an optional opportunity to contact the partner themselves. Consider reasonable expectations, necessity, the type of data and whether the university or association is acting as a public authority in the relevant task.",
+      "nuance": "Article 6(1)(f) does not apply to processing by public authorities in performing their tasks. Direct marketing objections under Article 21(2)–(3) have different consequences from general Article 21(1) objections.",
+      "terms": {
+        "gerechtvaardigd belang": "legitimate interest",
+        "belangenafweging": "balancing of interests"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 6(1)(f), 13(1)(d), 21; Recital 47"
+        },
+        {
+          "source": "knltb",
+          "location": "Judgment, paras. 37–57"
+        }
+      ],
+      "questions": [
+        {
+          "id": "g15-1",
+          "statement": "An interest can be commercial and still potentially qualify as legitimate.",
+          "answer": true,
+          "explanation": "KNLTB confirms commercial interests are not categorically excluded; other conditions remain.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(1)(f)"
+            },
+            {
+              "source": "knltb",
+              "location": "Judgment, paras. 37–57"
+            }
+          ]
+        },
+        {
+          "id": "g15-2",
+          "statement": "The KNLTB judgment means every sale of contact details is lawful.",
+          "answer": false,
+          "explanation": "The Court retained the necessity and balancing requirements; it did not approve all sales.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(1)(f)"
+            },
+            {
+              "source": "knltb",
+              "location": "Judgment, paras. 37–57"
+            }
+          ]
+        },
+        {
+          "id": "g15-3",
+          "statement": "An equally effective less intrusive alternative matters to the necessity test.",
+          "answer": true,
+          "explanation": "Necessity is not satisfied merely by a preference for a more intrusive method.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(1)(f)"
+            }
+          ]
+        },
+        {
+          "id": "g15-4",
+          "statement": "Reasonable expectations of individuals are irrelevant if the controller has a financial interest.",
+          "answer": false,
+          "explanation": "Reasonable expectations are relevant to balancing.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Recital 47"
+            }
+          ]
+        },
+        {
+          "id": "g15-5",
+          "statement": "A direct marketing objection requires processing for that marketing purpose to stop.",
+          "answer": true,
+          "explanation": "Article 21(3) requires cessation for that purpose.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 21(2)–(3)"
+            }
+          ]
+        },
+        {
+          "id": "g15-6",
+          "statement": "A public authority performing its tasks can use legitimate interests as an alternative to public task.",
+          "answer": false,
+          "explanation": "Article 6(1) expressly excludes this basis in that context.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6(1)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g16",
+      "module": "gdpr",
+      "title": "Special categories and Article 9",
+      "level": "Foundation — professional depth",
+      "objective": "Apply the two-layer lawfulness assessment and distinguish special-category data from other sensitive information.",
+      "concepts": [
+        "**Two layers.** Establish an Article 6 basis and a relevant exception to the Article 9(1) prohibition. The categories include health, genetic data, certain biometric data, racial or ethnic origin, political opinions, religion, trade union membership and data about sex life or sexual orientation.",
+        "**Biometric distinction.** A normal photograph is not automatically special-category biometric data. Article 9 addresses biometric data processed for unique identification. Technical processing and intended purpose matter. A photograph might nevertheless reveal other special categories depending on its use.",
+        "**Choose the actual exception.** Article 9(2) includes explicit consent, specified employment or social protection conditions, vital interests, legal claims, substantial public interest, healthcare, public health and research subject to requirements. Research under Article 9(2)(j) needs a legal foundation and safeguards. UAVG Article 24 supplies a Dutch conditional research exception; it is not a blanket exemption.",
+        "**Other sensitive data.** Grades, financial information and disciplinary records can be highly sensitive without necessarily being Article 9 categories. Article 10 separately governs criminal conviction and offence data. Security, minimization and risk assessment apply to all personal data."
+      ],
+      "example": "A university stores disability information to provide accommodations. The examination board needs to know which accommodation applies, but may not need the medical diagnosis. Compare that with a health research project analyzing diagnoses, where the information itself is scientifically necessary. The purpose, conditions, access and safeguards differ.",
+      "nuance": "Information may reveal health or another protected category indirectly. Do not decide solely from a column name or whether the data were supplied by the individual. Examine the actual meaning and intended inference.",
+      "terms": {
+        "bijzondere persoonsgegevens": "special-category personal data",
+        "gezondheidsgegevens": "health data",
+        "uitdrukkelijke toestemming": "explicit consent"
+      },
+      "references": [
+        {
+          "source": "gdpr",
+          "location": "Art. 4(13)–(15), 6, 9, 10, 89; Recitals 51–54"
+        },
+        {
+          "source": "uavg",
+          "location": "Art. 24; conditions for scientific research"
+        }
+      ],
+      "questions": [
+        {
+          "id": "g16-1",
+          "statement": "A medical diagnosis is health data even when it is stored with a study code.",
+          "answer": true,
+          "explanation": "Coding does not remove Article 9 when the record remains personal data.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 4(15), 9"
+            }
+          ]
+        },
+        {
+          "id": "g16-2",
+          "statement": "Every ordinary portrait photograph is automatically special-category biometric data.",
+          "answer": false,
+          "explanation": "The special biometric category concerns unique identification through biometric processing.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 4(14), 9(1); Recital 51"
+            }
+          ]
+        },
+        {
+          "id": "g16-3",
+          "statement": "A lawful Article 6 basis alone is sufficient for processing health data.",
+          "answer": false,
+          "explanation": "An applicable Article 9 exception is also required.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 6, 9"
+            }
+          ]
+        },
+        {
+          "id": "g16-4",
+          "statement": "A research exception under Article 9(2)(j) requires appropriate safeguards and a legal foundation.",
+          "answer": true,
+          "explanation": "The provision expressly refers to law and Article 89(1).",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 9(2)(j), 89"
+            }
+          ]
+        },
+        {
+          "id": "g16-5",
+          "statement": "Criminal conviction data are subject to a separate Article 10 regime.",
+          "answer": true,
+          "explanation": "Article 10 applies separate conditions rather than listing them in Article 9.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 10"
+            }
+          ]
+        },
+        {
+          "id": "g16-6",
+          "statement": "A grade is always an Article 9 special-category datum because it is confidential.",
+          "answer": false,
+          "explanation": "Confidentiality and statutory special categories are distinct.",
+          "references": [
+            {
+              "source": "gdpr",
+              "location": "Art. 9(1)"
             }
           ]
         }
